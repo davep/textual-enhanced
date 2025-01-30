@@ -21,12 +21,6 @@ class EnhancedApp(Generic[ReturnType], App[ReturnType]):
         SearchIcon {
             display: none;
         }
-        OptionList {
-            /* Make the scrollbar less gross. */
-            scrollbar-background: $panel;
-            scrollbar-background-hover: $panel;
-            scrollbar-background-active: $panel;
-        }
     }
 
     /* Make the LoadingIndicator look less like it was just slapped on. */
