@@ -44,7 +44,22 @@ TODO: Explain.
 
 ## Widgets
 
-TODO
+### `EnhancedOptionList`
+
+Adds `.preserved_highlight`, which can be used like:
+
+```python
+with stuff.preserved_highlight:
+   ...rebuild the content of the list...
+```
+
+Adds a few more navigation keys.
+
+Works around https://github.com/Textualize/textual/issues/5489.
+
+Mild style tweaks.
+
+### `TextViewer`
 
 
 [//]: # (README.md ends here)
