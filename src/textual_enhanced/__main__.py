@@ -2,12 +2,14 @@
 
 ##############################################################################
 # Textual imports.
+from textual import on, work
 from textual.app import ComposeResult
-from textual.widgets import Footer, Header
+from textual.widgets import Button, Footer, Header
 
 ##############################################################################
 # Textual Enhanced imports.
 from textual_enhanced.app import EnhancedApp
+from textual_enhanced.dialogs import ModalInput
 
 
 ##############################################################################
@@ -16,7 +18,16 @@ class DemoApp(EnhancedApp[None]):
 
     def compose(self) -> ComposeResult:
         yield Header()
+        yield Button("Quick input")
         yield Footer()
+
+    @on(Button.Pressed)
+    @work
+    async def demo_input(self) -> None:
+        if text := await self.push_screen_wait(
+            ModalInput(placeholder="Enter some text here")
+        ):
+            self.notify(f"Entered '{text}")
 
 
 ##############################################################################

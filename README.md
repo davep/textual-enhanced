@@ -61,5 +61,9 @@ Mild style tweaks.
 
 ### `TextViewer`
 
+## Dialogs
+
+### `QuickInput`
+
 
 [//]: # (README.md ends here)
