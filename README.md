@@ -7,7 +7,7 @@ Textual framework, mainly aimed at how I like my own Textual apps to look
 and work. I've written this as a common set of tweaks I want for my own
 Textual apps. It might be useful for yours too.
 
-## Enhancements
+## Tweaks to Textual
 
 ### App-wide
 
@@ -35,5 +35,16 @@ I've tweaked the command palette so that:
 ### The loading indicator
 
 The background is set to `transparent` by default.
+
+## Additional Features
+
+### With-some-batteries command palette/bindings
+
+TODO: Explain.
+
+## Widgets
+
+TODO
+
 
 [//]: # (README.md ends here)
