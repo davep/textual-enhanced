@@ -6,6 +6,10 @@
 
 - Added `ModalInput`.
   ([#3](https://github.com/davep/textual-enhanced/pull/3))
+- Added `HelpScreen`.
+  ([#5](https://github.com/davep/textual-enhanced/pull/5))
+- Added common command messages and a common command provider.
+  ([#5](https://github.com/davep/textual-enhanced/pull/5))
 
 ## v0.1.0
 

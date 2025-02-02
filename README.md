@@ -63,7 +63,12 @@ Mild style tweaks.
 
 ## Dialogs
 
+### `HelpScreen`
+
+TODO: Explain.
+
 ### `QuickInput`
 
+TODO: Explain.
 
 [//]: # (README.md ends here)
