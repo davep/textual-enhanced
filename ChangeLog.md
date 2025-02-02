@@ -1,5 +1,11 @@
 # textual-enhanced ChangeLog
 
+## Unreleased
+
+**Released: WiP**
+
+- Added `Confirm`.
+
 ## v0.2.0
 
 **Released: 2025-02-02**

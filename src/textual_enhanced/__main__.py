@@ -11,7 +11,7 @@ from textual.widgets import Button, Footer, Header
 from textual_enhanced import __version__
 from textual_enhanced.app import EnhancedApp
 from textual_enhanced.commands import Command, CommonCommands, Help, Quit
-from textual_enhanced.dialogs import HelpScreen, ModalInput
+from textual_enhanced.dialogs import Confirm, HelpScreen, ModalInput
 
 
 ##############################################################################
@@ -49,16 +49,30 @@ class DemoApp(EnhancedApp[None]):
 
     def compose(self) -> ComposeResult:
         yield Header()
-        yield Button("Quick input")
+        yield Button("Quick input", id="input")
+        yield Button("Yes or no?", id="confirm")
         yield Footer()
 
-    @on(Button.Pressed)
+    @on(Button.Pressed, "#input")
     @work
-    async def demo_input(self) -> None:
+    async def input_action(self) -> None:
         if text := await self.push_screen_wait(
             ModalInput(placeholder="Enter some text here")
         ):
             self.notify(f"Entered '{text}")
+
+    @on(Button.Pressed, "#confirm")
+    @work
+    async def confirm_action(self) -> None:
+        self.notify(
+            "YES!"
+            if await self.push_screen_wait(
+                Confirm(
+                    "Well?", "So, what's the decision? Are we going with yes or no?"
+                )
+            )
+            else "No!"
+        )
 
     @on(Help)
     def action_help_command(self) -> None:
