@@ -4,7 +4,7 @@
 
 **Released: WiP**
 
-- Added `Confirm`.
+- Added `Confirm`. ([#8](https://github.com/davep/textual-enhanced/pull/8))
 
 ## v0.2.0
 
