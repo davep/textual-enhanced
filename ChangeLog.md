@@ -1,8 +1,8 @@
 # textual-enhanced ChangeLog
 
-## Unreleased
+## v0.2.0
 
-**Released: WiP**
+**Released: 2025-02-02**
 
 - Added `ModalInput`.
   ([#3](https://github.com/davep/textual-enhanced/pull/3))
