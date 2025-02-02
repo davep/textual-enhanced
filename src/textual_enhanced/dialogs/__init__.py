@@ -2,11 +2,12 @@
 
 ##############################################################################
 # Local imports.
+from .help import HelpScreen
 from .modal_input import ModalInput
 
 ##############################################################################
 # Exports.
-__all__ = ["ModalInput"]
+__all__ = ["HelpScreen", "ModalInput"]
 
 
 ### __init__.py ends here
