@@ -88,7 +88,7 @@ class DemoApp(EnhancedApp[None]):
 
     COMMANDS = set()
 
-    def get_default_screen(self) -> EnhancedScreen:
+    def get_default_screen(self) -> Main:
         return Main()
 
 
