@@ -1,13 +1,17 @@
 """Provides a function for adding a key name to a label."""
 
 ##############################################################################
+# Python imports.
+from typing import Any
+
+##############################################################################
 # Textual imports.
 from textual.app import App
 from textual.widget import Widget
 
 
 ##############################################################################
-def add_key(label: str, key: str, context: App | Widget) -> str:
+def add_key(label: str, key: str, context: App[Any] | Widget) -> str:
     """Add a key name to a label.
 
     Args:
