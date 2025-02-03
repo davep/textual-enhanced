@@ -5,6 +5,7 @@
 **Released: WiP**
 
 - Allow forcing `dim` when adding a key with `add_key`.
+- Added `EnhancedScreen`.
 
 ## v0.3.0
 
