@@ -1,5 +1,11 @@
 # textual-enhanced ChangeLog
 
+## Unreleased
+
+**Released: WiP**
+
+- Allow forcing `dim` when adding a key with `add_key`.
+
 ## v0.3.0
 
 **Released: 2025-02-03**
