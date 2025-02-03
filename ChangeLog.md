@@ -1,8 +1,8 @@
 # textual-enhanced ChangeLog
 
-## Unreleased
+## v0.4.0
 
-**Released: WiP**
+**Released: 2025-02-03**
 
 - Allow forcing `dim` when adding a key with `add_key`.
   ([#11](https://github.com/davep/textual-enhanced/pull/11))
