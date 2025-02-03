@@ -5,7 +5,7 @@
 **Released: WiP**
 
 - Added `Confirm`. ([#8](https://github.com/davep/textual-enhanced/pull/8))
-- Added `add_key`.
+- Added `add_key`. ([#9](https://github.com/davep/textual-enhanced/pull/9))
 
 ## v0.2.0
 
