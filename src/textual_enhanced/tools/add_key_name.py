@@ -11,7 +11,7 @@ from textual.widget import Widget
 
 
 ##############################################################################
-def add_key(label: str, key: str, context: App[Any] | Widget) -> str:
+def add_key(label: str, key: str, context: App[Any] | Widget | None = None) -> str:
     """Add a key name to a label.
 
     Args:
@@ -29,7 +29,9 @@ def add_key(label: str, key: str, context: App[Any] | Widget) -> str:
     if isinstance(context, Widget):
         context = context.app
     key_colour = (
-        "dim" if context.current_theme is None else context.current_theme.accent
+        "dim"
+        if context is None or context.current_theme is None
+        else context.current_theme.accent
     )
     return f"{label} [{key_colour}]\\[{key}][/]"
 
