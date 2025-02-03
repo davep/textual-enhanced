@@ -1,8 +1,8 @@
 # textual-enhanced ChangeLog
 
-## Unreleased
+## v0.3.0
 
-**Released: WiP**
+**Released: 2025-02-03**
 
 - Added `Confirm`. ([#8](https://github.com/davep/textual-enhanced/pull/8))
 - Added `add_key`. ([#9](https://github.com/davep/textual-enhanced/pull/9))
