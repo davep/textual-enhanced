@@ -8,6 +8,10 @@ from textual.containers import Horizontal, Vertical
 from textual.screen import ModalScreen
 from textual.widgets import Button, Label
 
+##############################################################################
+# Local imports.
+from ..tools import add_key
+
 
 ##############################################################################
 class Confirm(ModalScreen[bool]):
@@ -77,15 +81,12 @@ class Confirm(ModalScreen[bool]):
 
     def compose(self) -> ComposeResult:
         """Compose the layout of the dialog."""
-        key_colour = (
-            "dim" if self.app.current_theme is None else self.app.current_theme.accent
-        )
         with Vertical() as dialog:
             dialog.border_title = self._title
             yield Label(self._question)
             with Horizontal():
-                yield Button(f"{self._no} [{key_colour}]\\[Esc][/]", id="no")
-                yield Button(f"{self._yes} [{key_colour}]\\[F2][/]", id="yes")
+                yield Button(add_key(self._no, "Esc", self), id="no")
+                yield Button(add_key(self._yes, "F2", self), id="yes")
 
     @on(Button.Pressed, "#yes")
     def action_yes(self) -> None:
