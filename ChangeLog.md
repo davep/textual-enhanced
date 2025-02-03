@@ -5,7 +5,9 @@
 **Released: WiP**
 
 - Allow forcing `dim` when adding a key with `add_key`.
+  ([#11](https://github.com/davep/textual-enhanced/pull/11))
 - Added `EnhancedScreen`.
+  ([#12](https://github.com/davep/textual-enhanced/pull/12))
 
 ## v0.3.0
 
