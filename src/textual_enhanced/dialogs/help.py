@@ -20,6 +20,7 @@ from textual.widgets import Button, Markdown
 ##############################################################################
 # Textual enhanced imports.
 from ..commands import Command
+from ..tools import add_key
 
 
 ##############################################################################
@@ -131,7 +132,7 @@ class HelpScreen(ModalScreen[None]):
             with VerticalScroll():
                 yield Markdown(self._template.format(context_help=self._context_help))
             with Center():
-                yield Button("Okay [dim]\\[Esc]")
+                yield Button(add_key("Okay", "Esc", self))
 
     @on(Button.Pressed)
     def action_close(self) -> None:

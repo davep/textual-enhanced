@@ -71,4 +71,10 @@ TODO: Explain.
 
 TODO: Explain.
 
+## Tools
+
+### `add_key`
+
+TODO: Explain.
+
 [//]: # (README.md ends here)
