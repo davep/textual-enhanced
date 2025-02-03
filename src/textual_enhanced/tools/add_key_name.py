@@ -17,7 +17,7 @@ def add_key(label: str, key: str, context: App[Any] | Widget) -> str:
     Args:
         label: The label to add the key to.
         key: The display name of the key to add.
-        context: The widget or application.
+        context: The widget, screen or application.
 
     Returns:
         The label with a display of the key added.
