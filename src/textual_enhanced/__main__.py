@@ -1,18 +1,48 @@
 """A simple demo app of some of the enhancements."""
 
 ##############################################################################
+# Python imports.
+from dataclasses import dataclass
+
+##############################################################################
 # Textual imports.
 from textual import on, work
 from textual.app import ComposeResult
+from textual.message import Message
 from textual.widgets import Button, Footer, Header
 
 ##############################################################################
 # Textual Enhanced imports.
 from textual_enhanced import __version__
 from textual_enhanced.app import EnhancedApp
-from textual_enhanced.commands import Command, CommonCommands, Help, Quit
+from textual_enhanced.commands import (
+    Command,
+    CommandHit,
+    CommandHits,
+    CommandsProvider,
+    CommonCommands,
+    Help,
+    Quit,
+)
 from textual_enhanced.dialogs import Confirm, HelpScreen, ModalInput
 from textual_enhanced.screen import EnhancedScreen
+
+
+##############################################################################
+@dataclass
+class ShowNumber(Message):
+    number: int
+
+
+##############################################################################
+class NumberProvider(CommandsProvider):
+    def commands(self) -> CommandHits:
+        for n in range(500):
+            yield CommandHit(
+                f"This is the rather special and unique number {n}",
+                f"This is some help about the number {n}, just in case you needed it",
+                ShowNumber(n),
+            )
 
 
 ##############################################################################
@@ -25,6 +55,7 @@ class Main(EnhancedScreen[None]):
         yield Header()
         yield Button("Quick input", id="input")
         yield Button("Yes or no?", id="confirm")
+        yield Button("Pick a number", id="number")
         yield Footer()
 
     @on(Button.Pressed, "#input")
@@ -48,6 +79,10 @@ class Main(EnhancedScreen[None]):
             else "No!"
         )
 
+    @on(Button.Pressed, "#number")
+    def pick_a_number(self) -> None:
+        self.show_palette(NumberProvider)
+
     @on(Help)
     def action_help_command(self) -> None:
         self.app.push_screen(HelpScreen())
@@ -55,6 +90,10 @@ class Main(EnhancedScreen[None]):
     @on(Quit)
     def action_quit_command(self) -> None:
         self.app.exit()
+
+    @on(ShowNumber)
+    def show_the_number(self, number: ShowNumber) -> None:
+        self.notify(f"You picked {number.number}")
 
 
 ##############################################################################
