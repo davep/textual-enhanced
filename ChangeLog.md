@@ -5,7 +5,7 @@
 **Released: WiP**
 
 - Tweaked the styling of the command palette's scrollbar so it's less
-  intrusive.
+  intrusive. ([#14](https://github.com/davep/textual-enhanced/pull/14))
 
 ## v0.4.0
 
