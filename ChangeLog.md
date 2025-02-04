@@ -1,5 +1,12 @@
 # textual-enhanced ChangeLog
 
+## Unreleased
+
+**Released: WiP**
+
+- Tweaked the styling of the command palette's scrollbar so it's less
+  intrusive.
+
 ## v0.4.0
 
 **Released: 2025-02-03**
