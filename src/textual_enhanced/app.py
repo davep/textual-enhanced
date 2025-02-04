@@ -18,6 +18,11 @@ class EnhancedApp(Generic[ReturnType], App[ReturnType]):
     CommandPalette > Vertical {
         width: 75%; /* Full-width command palette looks kinda unfinished. Fix that. */
         background: $panel;
+        OptionList{
+            scrollbar-background: $panel;
+            scrollbar-background-hover: $panel;
+            scrollbar-background-active: $panel;
+        }
         SearchIcon {
             display: none;
         }
