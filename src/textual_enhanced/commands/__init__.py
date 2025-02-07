@@ -3,15 +3,16 @@
 ##############################################################################
 # Local imports.
 from .command import Command
-from .common import CommonCommands, Help, Quit
+from .common import ChangeTheme, CommonCommands, Help, Quit
 from .provider import CommandHit, CommandHits, CommandsProvider
 
 ##############################################################################
 # Exports.
 __all__ = [
+    "ChangeTheme",
+    "Command",
     "CommandHit",
     "CommandHits",
-    "Command",
     "CommandsProvider",
     "CommonCommands",
     "Help",

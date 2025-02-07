@@ -15,6 +15,13 @@ class Help(Command):
 
 
 ##############################################################################
+class ChangeTheme(Command):
+    """Change the application's theme"""
+
+    BINDING_KEY = "f9"
+
+
+##############################################################################
 class Quit(Command):
     """Quit the application"""
 
@@ -33,6 +40,7 @@ class CommonCommands(CommandsProvider):
             The commands for the command palette.
         """
         yield Help()
+        yield ChangeTheme()
         yield Quit()
 
 
