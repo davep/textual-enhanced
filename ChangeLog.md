@@ -6,6 +6,8 @@
 
 - Tweaked the styling of the command palette's scrollbar so it's less
   intrusive. ([#14](https://github.com/davep/textual-enhanced/pull/14))
+- Added `ChangeTheme` as a common command.
+- Added handling code for the common commands to `EnhancedScreen`.
 
 ## v0.4.0
 
