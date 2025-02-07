@@ -3,7 +3,7 @@
 ##############################################################################
 # Local imports.
 from .command import Command
-from .provider import CommandHit, CommandHits, CommandsProvider
+from .provider import CommandHits, CommandsProvider
 
 
 ##############################################################################
