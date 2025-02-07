@@ -16,6 +16,7 @@ from textual.widgets import Button, Footer, Header
 from textual_enhanced import __version__
 from textual_enhanced.app import EnhancedApp
 from textual_enhanced.commands import (
+    ChangeTheme,
     Command,
     CommandHit,
     CommandHits,
@@ -24,7 +25,7 @@ from textual_enhanced.commands import (
     Help,
     Quit,
 )
-from textual_enhanced.dialogs import Confirm, HelpScreen, ModalInput
+from textual_enhanced.dialogs import Confirm, ModalInput
 from textual_enhanced.screen import EnhancedScreen
 
 
@@ -47,7 +48,7 @@ class NumberProvider(CommandsProvider):
 
 ##############################################################################
 class Main(EnhancedScreen[None]):
-    COMMAND_MESSAGES = {Help, Quit}
+    COMMAND_MESSAGES = (Help, ChangeTheme, Quit)
     COMMANDS = {CommonCommands}
     BINDINGS = Command.bindings(*COMMAND_MESSAGES)
 
@@ -82,14 +83,6 @@ class Main(EnhancedScreen[None]):
     @on(Button.Pressed, "#number")
     def pick_a_number(self) -> None:
         self.show_palette(NumberProvider)
-
-    @on(Help)
-    def action_help_command(self) -> None:
-        self.app.push_screen(HelpScreen())
-
-    @on(Quit)
-    def action_quit_command(self) -> None:
-        self.app.exit()
 
     @on(ShowNumber)
     def show_the_number(self, number: ShowNumber) -> None:
