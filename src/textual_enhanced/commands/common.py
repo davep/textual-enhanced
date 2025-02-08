@@ -3,7 +3,7 @@
 ##############################################################################
 # Local imports.
 from .command import Command
-from .provider import CommandHit, CommandHits, CommandsProvider
+from .provider import CommandHits, CommandsProvider
 
 
 ##############################################################################
@@ -12,6 +12,13 @@ class Help(Command):
 
     BINDING_KEY = "f1, ?"
     SHOW_IN_FOOTER = True
+
+
+##############################################################################
+class ChangeTheme(Command):
+    """Change the application's theme"""
+
+    BINDING_KEY = "f9"
 
 
 ##############################################################################
@@ -33,6 +40,7 @@ class CommonCommands(CommandsProvider):
             The commands for the command palette.
         """
         yield Help()
+        yield ChangeTheme()
         yield Quit()
 
 
