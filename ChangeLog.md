@@ -1,8 +1,8 @@
 # textual-enhanced ChangeLog
 
-## Unreleased
+## v0.5.0
 
-**Released: WiP**
+**Released: 2025-02-08**
 
 - Tweaked the styling of the command palette's scrollbar so it's less
   intrusive. ([#14](https://github.com/davep/textual-enhanced/pull/14))
