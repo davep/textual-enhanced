@@ -28,21 +28,27 @@ class ModalInput(ModalScreen[str | None]):
     BINDINGS = [("escape", "escape")]
 
     def __init__(
-        self, placeholder: str | None = None, classes: str | None = None
+        self,
+        placeholder: str | None = None,
+        initial: str = "",
+        classes: str | None = None,
     ) -> None:
         """Initialise the object.
 
         Args:
             placeholder: The placeholder text to use.
+            initial: The initial value for the input.
             classes: The CSS classes of the modal input.
         """
         super().__init__(classes=classes)
         self._placeholder = placeholder or ""
         """The placeholder to use for the input."""
+        self._initial = initial
+        """The initial value for the input."""
 
     def compose(self) -> ComposeResult:
         """Compose the input dialog."""
-        yield Input(placeholder=self._placeholder)
+        yield Input(self._initial, placeholder=self._placeholder)
 
     @on(Input.Submitted)
     def search(self) -> None:
