@@ -1,10 +1,11 @@
 # textual-enhanced ChangeLog
 
-## Unreleased
+## v0.6.0
 
-**Released: WiP***
+**Released: 2025-02-12.***
 
 - Added `initial` to `ModalInput`.
+  ([#17](https://github.com/davep/textual-enhanced/pull/17))
 
 ## v0.5.0
 
