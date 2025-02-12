@@ -1,5 +1,11 @@
 # textual-enhanced ChangeLog
 
+## Unreleased
+
+**Released: WiP***
+
+- Added `initial` to `ModalInput`.
+
 ## v0.5.0
 
 **Released: 2025-02-08**

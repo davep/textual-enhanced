@@ -55,15 +55,20 @@ class Main(EnhancedScreen[None]):
     def compose(self) -> ComposeResult:
         yield Header()
         yield Button("Quick input", id="input")
+        yield Button("Another input", id="input_with_default")
         yield Button("Yes or no?", id="confirm")
         yield Button("Pick a number", id="number")
         yield Footer()
 
-    @on(Button.Pressed, "#input")
+    @on(Button.Pressed, "#input, #input_with_default")
     @work
-    async def input_action(self) -> None:
+    async def input_action(self, message: Button.Pressed) -> None:
         if text := await self.app.push_screen_wait(
             ModalInput(placeholder="Enter some text here")
+            if message.button.id == "input"
+            else ModalInput(
+                placeholder="This has an initial value", initial="Testing..."
+            )
         ):
             self.notify(f"Entered '{text}")
 
