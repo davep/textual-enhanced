@@ -1,5 +1,11 @@
 # textual-enhanced ChangeLog
 
+## Unrelased
+
+**Released: WiP.***
+
+- Added `maybe` to `CommandsProvider`.
+
 ## v0.6.0
 
 **Released: 2025-02-12.***

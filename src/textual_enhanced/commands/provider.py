@@ -46,6 +46,23 @@ class CommandsProvider(Provider):
         """The prompt for the command provider."""
         return ""
 
+    def maybe(self, command: type[Command]) -> CommandHits:
+        """Yield a command if it's applicable.
+
+        Args:
+            command: The type of the command to maybe yield.
+
+        Yields:
+            The command if it can be used right now.
+
+        This method takes the command, looks at its `action_name` and uses
+        Textual's `check_action` to see if the action can be performed right
+        now. If it can it will `yield` an instance of the command, otherwise
+        it does nothing.
+        """
+        if self.screen.check_action(command.action_name(), ()):
+            yield command()
+
     @abstractmethod
     def commands(self) -> CommandHits:
         """Provide the command data for the command palette.
