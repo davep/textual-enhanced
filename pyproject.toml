@@ -1,6 +1,6 @@
 [project]
 name = "textual-enhanced"
-version = "0.6.0"
+version = "0.7.0"
 description = "A library of mildly-opinionated enhancements to Textual"
 authors = [
     { name = "Dave Pearson", email = "davep@davep.org" }
@@ -20,7 +20,7 @@ keywords = [
 classifiers = [
     "License :: OSI Approved :: MIT License",
     "Environment :: Console",
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3.9",

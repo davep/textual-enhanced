@@ -1,14 +1,14 @@
 # textual-enhanced ChangeLog
 
-## Unrelased
+## v0.7.0
 
-**Released: WiP.***
+**Released: 2025-03-02***
 
 - Added `maybe` to `CommandsProvider`.
 
 ## v0.6.0
 
-**Released: 2025-02-12.***
+**Released: 2025-02-12**
 
 - Added `initial` to `ModalInput`.
   ([#17](https://github.com/davep/textual-enhanced/pull/17))
