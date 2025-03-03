@@ -32,23 +32,33 @@ class Command(Message):
     By default the action will be:
 
        `action_{snake-case-of-command}_command`
+
+    There are some commands that will result in unhelpful snake-case names,
+    and also times where you want the action method named in a better way;
+    in such cases use `ACTION` to override the method name.
     """
 
     FOOTER_TEXT: str | None = None
     """The text to show in the footer.
 
     Notes:
-        If no `FOOTER_TEXT` is provided the `command` will be used.
+        If no `FOOTER_TEXT` is provided the
+        [`command`][textual_enhanced.commands.Command.command] will be used.
     """
 
     SHOW_IN_FOOTER: bool = False
-    """Should the command be shown in the footer?"""
+    """Should the command be shown in the [footer][textual.widgets.Footer]?
+
+    By default commands are *not* shown in the
+    [footer][textual.widgets.Footer], so set this to [`True`][True] to have
+    the command appear there.
+    """
 
     BINDING_KEY: str | tuple[str, str] | None = None
     """The binding key for the command.
 
     This can either be a string, which is the keys to bind, a tuple of the
-    keys and also an overriding display value, or `None`.
+    keys and also an overriding display value, or [`None`][None].
     """
 
     _SPLITTER: Final[Pattern[str]] = compile("[A-Z]?[a-z]+|[A-Z]+(?=[A-Z]|$)")
@@ -83,7 +93,7 @@ class Command(Message):
         """Get the key that is the binding for this command.
 
         Returns:
-            The key that is bound, or `None` if there isn't one.
+            The key that is bound, or [`None`][None] if there isn't one.
 
         Notes:
             If a command has multiple bindings, only the first key is
@@ -115,7 +125,7 @@ class Command(Message):
             bindings: Normal Textual bindings or a command class.
 
         Returns:
-            A list of bindings that can be used with `BINDINGS`.
+            A list of bindings that can be used with [`BINDINGS`][textual.dom.DOMNode.BINDINGS].
         """
         return [
             (binding if isinstance(binding, (Binding, tuple)) else binding.binding())
@@ -127,7 +137,7 @@ class Command(Message):
         """Create a binding object for the command.
 
         Returns:
-            A `Binding` for the command's key bindings.
+            A [`Binding`][textual.binding.Binding] for the command's key bindings.
 
         Raises:
             ValueError: If the command has no key binding.
@@ -153,7 +163,7 @@ class Command(Message):
         """Create a binding object for the primary key of the command.
 
         Returns:
-            A `Binding` for the primary key.
+            A [`Binding`][textual.binding.Binding] for the primary key.
 
         Raises:
             ValueError: If the command has no key binding.
