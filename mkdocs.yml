@@ -5,6 +5,8 @@ repo_url: https://github.com/davep/textual-enhanced
 nav:
   - Guide:
       - index.md
+      - command_system.md
+      - dialogs.md
   - Library Contents:
       - library-contents/app.md
       - library-contents/commands.md
