@@ -1,0 +1,2795 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../app/">
+      
+      
+        <link rel="next" href="../dialogs/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>textual_enhanced.commands - textual-enhanced</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#textual_enhanced.commands" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="textual-enhanced" class="md-header__button md-logo" aria-label="textual-enhanced" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            textual-enhanced
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              textual_enhanced.commands
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/davep/textual-enhanced" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+    
+  
+  Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../app/" class="md-tabs__link">
+          
+  
+    
+  
+  Library Contents
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="textual-enhanced" class="md-nav__button md-logo" aria-label="textual-enhanced" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    textual-enhanced
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/davep/textual-enhanced" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Guide
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Library Contents
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Library Contents
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    textual_enhanced.app
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    textual_enhanced.commands
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    textual_enhanced.commands
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#textual_enhanced.commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.CommandHits" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;CommandHits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.ChangeTheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;ChangeTheme
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;Command
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.ACTION" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;ACTION
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.BINDING_KEY" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;BINDING_KEY
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.COMMAND" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;COMMAND
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.FOOTER_TEXT" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;FOOTER_TEXT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.SHOW_IN_FOOTER" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;SHOW_IN_FOOTER
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.context_command" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;context_command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.context_tooltip" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;context_tooltip
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.has_binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;has_binding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.action_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;action_name
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;binding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.bindings" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;bindings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" bindings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.bindings(bindings)" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-parameter"></code>&nbsp;bindings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.command" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.key_binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;key_binding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.primary_binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;primary_binding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.tooltip" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;tooltip
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.CommandHit" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;CommandHit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" CommandHit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.CommandHit.command" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.CommandHit.description" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;description
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.CommandHit.message" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;message
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.CommandsProvider" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;CommandsProvider
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" CommandsProvider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.CommandsProvider.commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.CommandsProvider.discover" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;discover
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.CommandsProvider.maybe" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;maybe
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" maybe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.CommandsProvider.maybe(command)" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-parameter"></code>&nbsp;command
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.CommandsProvider.prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;prompt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.CommandsProvider.search" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;search
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" search">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.CommandsProvider.search(query)" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-parameter"></code>&nbsp;query
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.CommonCommands" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;CommonCommands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" CommonCommands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.CommonCommands.commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Help" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;Help
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Quit" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;Quit
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dialogs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    textual_enhanced.dialogs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../screen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    textual_enhanced.screen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    textual_enhanced.tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../widgets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    textual_enhanced.widgets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#textual_enhanced.commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.CommandHits" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;CommandHits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.ChangeTheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;ChangeTheme
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;Command
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.ACTION" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;ACTION
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.BINDING_KEY" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;BINDING_KEY
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.COMMAND" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;COMMAND
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.FOOTER_TEXT" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;FOOTER_TEXT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.SHOW_IN_FOOTER" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;SHOW_IN_FOOTER
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.context_command" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;context_command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.context_tooltip" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;context_tooltip
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.has_binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;has_binding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.action_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;action_name
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;binding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.bindings" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;bindings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" bindings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.bindings(bindings)" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-parameter"></code>&nbsp;bindings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.command" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.key_binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;key_binding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.primary_binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;primary_binding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Command.tooltip" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;tooltip
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.CommandHit" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;CommandHit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" CommandHit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.CommandHit.command" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.CommandHit.description" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;description
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.CommandHit.message" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;message
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.CommandsProvider" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;CommandsProvider
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" CommandsProvider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.CommandsProvider.commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.CommandsProvider.discover" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;discover
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.CommandsProvider.maybe" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;maybe
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" maybe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.CommandsProvider.maybe(command)" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-parameter"></code>&nbsp;command
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.CommandsProvider.prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;prompt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.CommandsProvider.search" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;search
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" search">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.CommandsProvider.search(query)" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-parameter"></code>&nbsp;query
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.CommonCommands" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;CommonCommands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" CommonCommands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.CommonCommands.commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Help" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;Help
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textual_enhanced.commands.Quit" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;Quit
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>textual_enhanced.commands</h1>
+
+<div class="doc doc-object doc-module">
+
+
+
+<a id="textual_enhanced.commands"></a>
+    <div class="doc doc-contents first">
+
+        <p>Provides code related to 'commands' in a Textual application.</p>
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h2 id="textual_enhanced.commands.CommandHits" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">CommandHits</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+</h2>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">CommandHits</span> <span class="o">=</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Iterator" href="https://docs.python.org/3/library/typing.html#typing.Iterator">Iterator</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title=" CommandHit (textual_enhanced.commands.provider.CommandHit)" href="#textual_enhanced.commands.CommandHit">CommandHit</a></span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-internal" title=" Command (textual_enhanced.commands.command.Command)" href="#textual_enhanced.commands.Command">Command</a></span><span class="p">]</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>The result of looking for commands to make into hits.</p>
+    </div>
+
+</div>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="textual_enhanced.commands.ChangeTheme" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">ChangeTheme</span>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title=" Command (textual_enhanced.commands.command.Command)" href="#textual_enhanced.commands.Command">Command</a></code></p>
+
+
+        <p>Change the application's theme</p>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="textual_enhanced.commands.Command" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">Command</span>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-external" title="textual.message.Message" href="https://textual.textualize.io/api/message/#textual.message.Message">Message</a></code></p>
+
+
+        <p>Base class for all application command messages.</p>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="textual_enhanced.commands.Command.ACTION" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">ACTION</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">ACTION</span> <span class="o">=</span> <span class="kc">None</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>The action to call when the command is executed.</p>
+<p>By default the action will be:</p>
+<p><code>action_{snake-case-of-command}_command</code></p>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="textual_enhanced.commands.Command.BINDING_KEY" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">BINDING_KEY</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">BINDING_KEY</span> <span class="o">=</span> <span class="kc">None</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>The binding key for the command.</p>
+<p>This can either be a string, which is the keys to bind, a tuple of the
+keys and also an overriding display value, or <code>None</code>.</p>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="textual_enhanced.commands.Command.COMMAND" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">COMMAND</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">COMMAND</span> <span class="o">=</span> <span class="kc">None</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>The text for the command.</p>
+
+
+<details class="notes" open>
+  <summary>Notes</summary>
+  <p>If no <code>COMMAND</code> is provided the class name will be used.</p>
+</details>    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="textual_enhanced.commands.Command.FOOTER_TEXT" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">FOOTER_TEXT</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">FOOTER_TEXT</span> <span class="o">=</span> <span class="kc">None</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>The text to show in the footer.</p>
+
+
+<details class="notes" open>
+  <summary>Notes</summary>
+  <p>If no <code>FOOTER_TEXT</code> is provided the <code>command</code> will be used.</p>
+</details>    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="textual_enhanced.commands.Command.SHOW_IN_FOOTER" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">SHOW_IN_FOOTER</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">SHOW_IN_FOOTER</span> <span class="o">=</span> <span class="kc">False</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Should the command be shown in the footer?</p>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="textual_enhanced.commands.Command.context_command" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">context_command</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">context_command</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>The command in context.</p>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="textual_enhanced.commands.Command.context_tooltip" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">context_tooltip</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">context_tooltip</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>The tooltip for the comment, in context.</p>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="textual_enhanced.commands.Command.has_binding" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">has_binding</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">has_binding</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Does this command have a binding?</p>
+    </div>
+
+</div>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="textual_enhanced.commands.Command.action_name" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">action_name</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">action_name</span><span class="p">()</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Get the action name for the command.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The action name.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="textual_enhanced.commands.Command.binding" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">binding</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">binding</span><span class="p">()</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Create a binding object for the command.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><a class="autorefs autorefs-external" title="textual.binding.Binding" href="https://textual.textualize.io/api/binding/#textual.binding.Binding">Binding</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A <code>Binding</code> for the command's key bindings.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/exceptions.html#ValueError">ValueError</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If the command has no key binding.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="textual_enhanced.commands.Command.bindings" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">bindings</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">bindings</span><span class="p">(</span><span class="o">*</span><span class="n"><span title="textual_enhanced.commands.Command.bindings(*bindings)">bindings</span></span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Create bindings.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+<h4 id="textual_enhanced.commands.Command.bindings(bindings)" class="doc doc-heading doc-heading-parameter">                  <code>bindings</code>
+</h4>            </td>
+            <td>
+                  <code><a class="autorefs autorefs-external" title="textual.binding.BindingType" href="https://textual.textualize.io/api/binding/#textual.binding.BindingType">BindingType</a> | <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#type">type</a>[<a class="autorefs autorefs-internal" title=" Command (textual_enhanced.commands.command.Command)" href="#textual_enhanced.commands.Command">Command</a>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Normal Textual bindings or a command class.</p>
+              </div>
+            </td>
+            <td>
+                  <code>()</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#list">list</a>[<a class="autorefs autorefs-external" title="textual.binding.BindingType" href="https://textual.textualize.io/api/binding/#textual.binding.BindingType">BindingType</a>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A list of bindings that can be used with <code>BINDINGS</code>.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="textual_enhanced.commands.Command.command" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">command</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">command</span><span class="p">()</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>The text for the command.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The command's textual name.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="textual_enhanced.commands.Command.key_binding" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">key_binding</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">key_binding</span><span class="p">()</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Get the key that is the binding for this command.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The key that is bound, or <code>None</code> if there isn't one.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="notes" open>
+  <summary>Notes</summary>
+  <p>If a command has multiple bindings, only the first key is
+returned.</p>
+</details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="textual_enhanced.commands.Command.primary_binding" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">primary_binding</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">primary_binding</span><span class="p">()</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Create a binding object for the primary key of the command.</p>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><a class="autorefs autorefs-external" title="textual.binding.Binding" href="https://textual.textualize.io/api/binding/#textual.binding.Binding">Binding</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A <code>Binding</code> for the primary key.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<p><span class="doc-section-title">Raises:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/exceptions.html#ValueError">ValueError</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>If the command has no key binding.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="textual_enhanced.commands.Command.tooltip" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">tooltip</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">tooltip</span><span class="p">()</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>The tooltip for the command.</p>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="textual_enhanced.commands.CommandHit" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">CommandHit</span>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-external" title="typing.NamedTuple" href="https://docs.python.org/3/library/typing.html#typing.NamedTuple">NamedTuple</a></code></p>
+
+
+        <p>A command hit for use in building a command palette hit.</p>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="textual_enhanced.commands.CommandHit.command" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">command</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">command</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>The command.</p>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="textual_enhanced.commands.CommandHit.description" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">description</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">description</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>The description of the command.</p>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="textual_enhanced.commands.CommandHit.message" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">message</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">message</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>The message to emit when the command is chosen.</p>
+    </div>
+
+</div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="textual_enhanced.commands.CommandsProvider" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">CommandsProvider</span>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-external" title="textual.command.Provider" href="https://textual.textualize.io/api/command/#textual.command.Provider">Provider</a></code></p>
+
+
+        <p>A base class for command-message-oriented command palette commands.</p>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="textual_enhanced.commands.CommandsProvider.commands" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">commands</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">commands</span><span class="p">()</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Provide the command data for the command palette.</p>
+
+
+    <p><span class="doc-section-title">Yields:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><a class="autorefs autorefs-internal" title=" CommandHits (textual_enhanced.commands.provider.CommandHits)" href="#textual_enhanced.commands.CommandHits">CommandHits</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A tuple of the command, the command description and a command message.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="textual_enhanced.commands.CommandsProvider.discover" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">discover</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">discover</span><span class="p">()</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Handle a request to discover commands.</p>
+
+
+    <p><span class="doc-section-title">Yields:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><a class="autorefs autorefs-external" title="textual.command.Hits" href="https://textual.textualize.io/api/command/#textual.command.Hits">Hits</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Command discovery hits for the command palette.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="textual_enhanced.commands.CommandsProvider.maybe" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">maybe</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">maybe</span><span class="p">(</span><span class="n"><a class="autorefs autorefs-internal" title=" command (textual_enhanced.commands.CommandsProvider.maybe(command))" href="#textual_enhanced.commands.CommandsProvider.maybe(command)">command</a></span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Yield a command if it's applicable.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+<h4 id="textual_enhanced.commands.CommandsProvider.maybe(command)" class="doc doc-heading doc-heading-parameter">                  <code>command</code>
+</h4>            </td>
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#type">type</a>[<a class="autorefs autorefs-internal" title=" Command (textual_enhanced.commands.command.Command)" href="#textual_enhanced.commands.Command">Command</a>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The type of the command to maybe yield.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Yields:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><a class="autorefs autorefs-internal" title=" CommandHits (textual_enhanced.commands.provider.CommandHits)" href="#textual_enhanced.commands.CommandHits">CommandHits</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The command if it can be used right now.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+        <p>This method takes the command, looks at its <code>action_name</code> and uses
+Textual's <code>check_action</code> to see if the action can be performed right
+now. If it can it will <code>yield</code> an instance of the command, otherwise
+it does nothing.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="textual_enhanced.commands.CommandsProvider.prompt" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">prompt</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">prompt</span><span class="p">()</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>The prompt for the command provider.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="textual_enhanced.commands.CommandsProvider.search" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">search</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">search</span><span class="p">(</span><span class="n"><a class="autorefs autorefs-internal" title=" query (textual_enhanced.commands.CommandsProvider.search(query))" href="#textual_enhanced.commands.CommandsProvider.search(query)">query</a></span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Handle a request to search for commands that match the query.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+<h4 id="textual_enhanced.commands.CommandsProvider.search(query)" class="doc doc-heading doc-heading-parameter">                  <code>query</code>
+</h4>            </td>
+            <td>
+                  <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The query from the user.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Yields:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><a class="autorefs autorefs-external" title="textual.command.Hits" href="https://textual.textualize.io/api/command/#textual.command.Hits">Hits</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Command hits for the command palette.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="textual_enhanced.commands.CommonCommands" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">CommonCommands</span>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title=" CommandsProvider (textual_enhanced.commands.provider.CommandsProvider)" href="#textual_enhanced.commands.CommandsProvider">CommandsProvider</a></code></p>
+
+
+        <p>Provides some common top-level commands for the application.</p>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="textual_enhanced.commands.CommonCommands.commands" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">commands</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">commands</span><span class="p">()</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Provide the main application commands for the command palette.</p>
+
+
+    <p><span class="doc-section-title">Yields:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><a class="autorefs autorefs-internal" title=" CommandHits (textual_enhanced.commands.provider.CommandHits)" href="#textual_enhanced.commands.CommandHits">CommandHits</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The commands for the command palette.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="textual_enhanced.commands.Help" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">Help</span>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title=" Command (textual_enhanced.commands.command.Command)" href="#textual_enhanced.commands.Command">Command</a></code></p>
+
+
+        <p>Show help for and information about the application</p>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="textual_enhanced.commands.Quit" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">Quit</span>
+
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title=" Command (textual_enhanced.commands.command.Command)" href="#textual_enhanced.commands.Command">Command</a></code></p>
+
+
+        <p>Quit the application</p>
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../app/" class="md-footer__link md-footer__link--prev" aria-label="Previous: textual_enhanced.app">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                textual_enhanced.app
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../dialogs/" class="md-footer__link md-footer__link--next" aria-label="Next: textual_enhanced.dialogs">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                textual_enhanced.dialogs
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.tabs.sticky", "navigation.footer", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
