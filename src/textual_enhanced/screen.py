@@ -35,12 +35,16 @@ class EnhancedScreen(Generic[ScreenResultType], Screen[ScreenResultType]):
 
     @on(Help)
     def action_help_command(self) -> None:
-        """Toggle the display of the help panel."""
+        """Show the help screen.
+
+        Rather than use Textual's own help facility, this shows [my own help
+        screen][textual_enhanced.dialogs.HelpScreen].
+        """
         self.app.push_screen(HelpScreen(self))
 
     @on(ChangeTheme)
     def action_change_theme_command(self) -> None:
-        """Show the theme picker."""
+        """Show the Textual theme picker command palette."""
         self.app.search_themes()
 
     @on(Quit)
