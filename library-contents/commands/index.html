@@ -312,6 +312,10 @@
           
         
       
+        
+      
+        
+      
     
     
       
@@ -338,6 +342,11 @@
 
             </a>
             
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
@@ -347,6 +356,50 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../command_system/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Command System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dialogs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dialogs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -1515,6 +1568,9 @@
         <p>The action to call when the command is executed.</p>
 <p>By default the action will be:</p>
 <p><code>action_{snake-case-of-command}_command</code></p>
+<p>There are some commands that will result in unhelpful snake-case names,
+and also times where you want the action method named in a better way;
+in such cases use <code>ACTION</code> to override the method name.</p>
     </div>
 
 </div>
@@ -1540,7 +1596,7 @@
 
         <p>The binding key for the command.</p>
 <p>This can either be a string, which is the keys to bind, a tuple of the
-keys and also an overriding display value, or <code>None</code>.</p>
+keys and also an overriding display value, or <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/constants.html#None"><code>None</code></a>.</p>
     </div>
 
 </div>
@@ -1598,7 +1654,8 @@ keys and also an overriding display value, or <code>None</code>.</p>
 
 <details class="notes" open>
   <summary>Notes</summary>
-  <p>If no <code>FOOTER_TEXT</code> is provided the <code>command</code> will be used.</p>
+  <p>If no <code>FOOTER_TEXT</code> is provided the
+<a class="autorefs autorefs-internal" title=" command" href="#textual_enhanced.commands.Command.command"><code>command</code></a> will be used.</p>
 </details>    </div>
 
 </div>
@@ -1622,7 +1679,10 @@ keys and also an overriding display value, or <code>None</code>.</p>
 
     <div class="doc doc-contents ">
 
-        <p>Should the command be shown in the footer?</p>
+        <p>Should the command be shown in the <a class="autorefs autorefs-external" href="https://textual.textualize.io/widgets/footer/#textual.widgets.Footer">footer</a>?</p>
+<p>By default commands are <em>not</em> shown in the
+<a class="autorefs autorefs-external" href="https://textual.textualize.io/widgets/footer/#textual.widgets.Footer">footer</a>, so set this to <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/constants.html#True"><code>True</code></a> to have
+the command appear there.</p>
     </div>
 
 </div>
@@ -1779,7 +1839,7 @@ keys and also an overriding display value, or <code>None</code>.</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>A <code>Binding</code> for the command's key bindings.</p>
+                <p>A <a class="autorefs autorefs-external" href="https://textual.textualize.io/api/binding/#textual.binding.Binding"><code>Binding</code></a> for the command's key bindings.</p>
               </div>
             </td>
           </tr>
@@ -1879,7 +1939,7 @@ keys and also an overriding display value, or <code>None</code>.</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>A list of bindings that can be used with <code>BINDINGS</code>.</p>
+                <p>A list of bindings that can be used with <a class="autorefs autorefs-external" href="https://textual.textualize.io/api/dom_node/#textual.dom.DOMNode.BINDINGS"><code>BINDINGS</code></a>.</p>
               </div>
             </td>
           </tr>
@@ -1971,7 +2031,7 @@ keys and also an overriding display value, or <code>None</code>.</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>The key that is bound, or <code>None</code> if there isn't one.</p>
+                <p>The key that is bound, or <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/constants.html#None"><code>None</code></a> if there isn't one.</p>
               </div>
             </td>
           </tr>
@@ -2023,7 +2083,7 @@ returned.</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>A <code>Binding</code> for the primary key.</p>
+                <p>A <a class="autorefs autorefs-external" href="https://textual.textualize.io/api/binding/#textual.binding.Binding"><code>Binding</code></a> for the primary key.</p>
               </div>
             </td>
           </tr>
