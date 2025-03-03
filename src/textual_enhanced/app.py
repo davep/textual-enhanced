@@ -12,7 +12,12 @@ from textual.binding import Binding
 
 ##############################################################################
 class EnhancedApp(Generic[ReturnType], App[ReturnType]):
-    """The Textual App class, with some tweaks."""
+    """The Textual [App class][textual.app.App]  with some styling tweaks.
+
+    `EnhancedApp` adds no code changes, but it does implement a number of
+    global styles that make a Textual app look just how I like. It also adds
+    some extra default bindings for calling the command palette.
+    """
 
     CSS = """
     CommandPalette > Vertical {

@@ -71,7 +71,17 @@ class PreservedHighlight:
 
 ##############################################################################
 class EnhancedOptionList(OptionList):
-    """The Textual `OptionList` with more features."""
+    """The Textual `OptionList` with more features.
+
+    Key changes are:
+
+    - By default some `vim`/`less`-user-friendly key bindings are added for
+      navigation.
+    - [`get_content_width`][textual_enhanced.widgets.EnhancedOptionList]
+      works around a known Textual bug.
+    - Adds
+      [`preserved_highlight`][textual_enhanced.widgets.EnhancedOptionList.preserved_highlight].
+    """
 
     DEFAULT_CSS = """
     EnhancedOptionList {
@@ -91,11 +101,37 @@ class EnhancedOptionList(OptionList):
 
     @property
     def preserved_highlight(self) -> PreservedHighlight:
-        """Provides a context that preserves the highlight location."""
+        """Provides a context that preserves the highlight location.
+
+        The rule for how this works is:
+
+        - If the highlighted option has an ID, an attempt will be made to
+          get back to that option;
+        - Failing the above an attempt will be made to return to the same
+          *location* in the list.
+        - If neither approach can be taken, and if there `OptionList` has
+          any content, the first option will be highlighted.
+
+        The benefit of this is that the content of an `OptionList` can be
+        cleared and built up again and, especially if your options have IDs,
+        the user will be no wiser that such drastic measures were taken.
+
+        Example:
+            ```python
+            with self.query_one(EnhancedOptionList).preserved_highlight:
+                ...do things that modify the `OptionList`
+            ```
+        """
         return PreservedHighlight(self)
 
     def get_content_width(self, container: Size, viewport: Size) -> int:
-        """Workaround for https://github.com/Textualize/textual/issues/5489"""
+        """Workaround for [textual#5489](https://github.com/Textualize/textual/issues/5489).
+
+        Note:
+            [textual#5489](https://github.com/Textualize/textual/issues/5489)
+            has been fixed in later versions of Textual, but textual >=2.0
+            still has some problems so I'm holding off using it for now.
+        """
         return (
             super().get_content_width(container, viewport) if self.option_count else 0
         )

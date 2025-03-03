@@ -65,14 +65,28 @@ class TextViewer(TextArea):
         self.app.copy_to_clipboard(for_clipboard)
 
     def action_cursor_line_start(self, select: bool = False) -> None:
-        """Add a slightly smarter use of going 'home'."""
+        """Add a slightly smarter use of going 'home'.
+
+        The rule with this version of going home is that if the cursor isn't
+        at the start of the line, then the normal
+        [`TextArea`][textual.widgets.TextArea] rules apply, otherwise if the
+        cursor *is* at the start of the line the cursor will go to the start
+        of the document.
+        """
         if self.cursor_at_start_of_line:
             self.move_cursor(self.document.start, select=select)
         else:
             super().action_cursor_line_start(select)
 
     def action_cursor_line_end(self, select: bool = False) -> None:
-        """Add a slightly smarter use of going 'end'."""
+        """Add a slightly smarter use of going 'end'.
+
+        The rule with this version of going to the end is that if the cursor
+        isn't at the end of the line, then the normal
+        [`TextArea`][textual.widgets.TextArea] rules apply, otherwise if the
+        cursor *is* at the end of the line the cursor will go to the end of
+        the document.
+        """
         if self.cursor_at_end_of_line:
             self.move_cursor(self.document.end, select=select)
         else:
