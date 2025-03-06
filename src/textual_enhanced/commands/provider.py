@@ -99,32 +99,21 @@ class CommandsProvider(Provider):
             text = Text(text)
         if not isinstance(message, Command) or not message.has_binding:
             return text
-        style = self.app.current_theme.accent if self.app.current_theme else None
+        key = Text(
+            f"[{self.app.get_key_display(message.primary_binding())}]",
+            style=(self.app.current_theme.accent if self.app.current_theme else None)
+            or "dim",
+        )
+        # There's a breaking change between Textual 1.0 and 2.0
+        # regarding how commands in the command palette are handled. I
+        # could report it but I know the experience will be exhausting
+        # and fruitless; so let's just handle it here.
+        #
+        # Eventually, once I'm happy that Textual 2.x is stable enough
+        # to use, I'll tidy this up.
         if isinstance(text, Text):
-            return text.append_text(Text(" ")).append_text(
-                Text(
-                    f"[{self.app.get_key_display(message.primary_binding())}]",
-                    style=style or "dim",
-                )
-            )
-        else:
-            # There's a breaking change between Textual 1.0 and 2.0
-            # regarding how commands in the command palette are handled. I
-            # could report it but I know the experience will be exhausting
-            # and fruitless; so let's just handle it here.
-            #
-            # Eventually, once I'm happy that Textual 2.x is stable enough
-            # to use, I'll tidy this up.
-            return Content.assemble(  # type: ignore
-                text,
-                " ",
-                Content.from_rich_text(
-                    Text(
-                        f"[{self.app.get_key_display(message.primary_binding())}]",
-                        style=style or "dim",
-                    )
-                ),
-            )
+            return text.append_text(Text(" ")).append_text(key)
+        return Content.assemble(text, " ", Content.from_rich_text(key))  # type: ignore
 
     async def discover(self) -> Hits:
         """Handle a request to discover commands.
