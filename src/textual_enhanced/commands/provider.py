@@ -115,7 +115,7 @@ class CommandsProvider(Provider):
             #
             # Eventually, once I'm happy that Textual 2.x is stable enough
             # to use, I'll tidy this up.
-            return Content.assemble(
+            return Content.assemble(  # type: ignore
                 text,
                 " ",
                 Content.from_rich_text(
