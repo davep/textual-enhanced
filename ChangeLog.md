@@ -1,5 +1,12 @@
 # textual-enhanced ChangeLog
 
+## v0.7.1
+
+**Released: 2025-03-07***
+
+- Add a temporary workaround for Textual 2.0.x's kinda-unannounced breaking
+  change to how the command palette works.
+
 ## v0.7.0
 
 **Released: 2025-03-02***
