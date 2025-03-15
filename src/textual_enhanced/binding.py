@@ -21,5 +21,10 @@ class HelpfulBinding(Binding):
     screen.
     """
 
+    @property
+    def most_helpful_description(self) -> str:
+        """The most helpful description possible."""
+        return self.tooltip or self.description
+
 
 ### binding.py ends here
