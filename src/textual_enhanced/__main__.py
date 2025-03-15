@@ -15,6 +15,7 @@ from textual.widgets import Button, Footer, Header
 # Textual Enhanced imports.
 from textual_enhanced import __version__
 from textual_enhanced.app import EnhancedApp
+from textual_enhanced.binding import HelpfulBinding
 from textual_enhanced.commands import (
     ChangeTheme,
     Command,
@@ -50,7 +51,17 @@ class NumberProvider(CommandsProvider):
 class Main(EnhancedScreen[None]):
     COMMAND_MESSAGES = (Help, ChangeTheme, Quit)
     COMMANDS = {CommonCommands}
-    BINDINGS = Command.bindings(*COMMAND_MESSAGES)
+    BINDINGS = Command.bindings(
+        *COMMAND_MESSAGES,
+        HelpfulBinding(
+            "ctrl+y, ctrl+i",
+            "gndn",
+            show=False,
+            description="This is the description",
+            tooltip="This is the tooltip",
+        ),
+        HelpfulBinding("ctrl+t, ctrl+k", "gndn", description="This is the description"),
+    )
 
     def compose(self) -> ComposeResult:
         yield Header()
