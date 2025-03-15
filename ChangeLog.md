@@ -1,5 +1,12 @@
 # textual-enhanced ChangeLog
 
+## Unreleased
+
+**Released: WiP***
+
+- Added the idea of a `HelpfulBinding`.
+  ([#27](https://github.com/davep/textual-enhanced/pull/27))
+
 ## v0.7.1
 
 **Released: 2025-03-07***
