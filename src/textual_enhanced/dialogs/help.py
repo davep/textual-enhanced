@@ -98,21 +98,6 @@ class HelpScreen(ModalScreen[None]):
             for key in binding.key.split(",")
         )
 
-    def binding_help(self, node: DOMNode) -> str:
-        """Build help from the bindings provided by a DOM node.
-
-        Args:
-            node: The node that might provide bindings.
-
-        Returns:
-            The help text.
-        """
-        bindings = ""
-        for binding in getattr(node, "BINDINGS", []):
-            if isinstance(binding, HelpfulBinding):
-                bindings += f"\n\n{binding}\n\n"
-        return f"\n\n{bindings}"
-
     def input_help(self, node: DOMNode) -> str:
         """Build help from the bindings and commands provided by a DOM node.
 
