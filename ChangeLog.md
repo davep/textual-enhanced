@@ -1,5 +1,12 @@
 # textual-enhanced ChangeLog
 
+## v0.8.1
+
+**Released: 2025-03-15***
+
+- Made a cosmetic improvement to the binding table in the help screen if
+  there are no bindings associated with commands.
+
 ## v0.8.0
 
 **Released: 2025-03-15***
