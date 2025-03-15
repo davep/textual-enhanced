@@ -19,6 +19,7 @@ from textual.widgets import Button, Markdown
 
 ##############################################################################
 # Textual enhanced imports.
+from ..binding import HelpfulBinding
 from ..commands import Command
 from ..tools import add_key
 
@@ -80,24 +81,40 @@ class HelpScreen(ModalScreen[None]):
         ).ancestors_with_self:
             if node.HELP is not None:
                 self._context_help += f"\n\n{cleandoc(node.HELP)}"
-            self._context_help += self.command_help(node)
+            self._context_help += self.input_help(node)
 
-    def _all_keys(self, command: Command) -> str:
-        """Render all the keys for the given command.
+    def _all_keys(self, source: Command | Binding) -> str:
+        """Render all the keys for the given command or binding.
 
         Args:
-            command: The command to get all the keys for.
+            source: The command or binding to get the keys for.
 
         Returns:
-            A string listing all the keys for the command.
+            A string listing all the keys for the command or binding.
         """
+        binding = source if isinstance(source, Binding) else source.binding()
         return ", ".join(
             self.app.get_key_display(Binding(key.strip(), ""))
-            for key in command.binding().key.split(",")
+            for key in binding.key.split(",")
         )
 
-    def command_help(self, node: DOMNode) -> str:
-        """Build help from the commands provided by a DOM node.
+    def binding_help(self, node: DOMNode) -> str:
+        """Build help from the bindings provided by a DOM node.
+
+        Args:
+            node: The node that might provide bindings.
+
+        Returns:
+            The help text.
+        """
+        bindings = ""
+        for binding in getattr(node, "BINDINGS", []):
+            if isinstance(binding, HelpfulBinding):
+                bindings += f"\n\n{binding}\n\n"
+        return f"\n\n{bindings}"
+
+    def input_help(self, node: DOMNode) -> str:
+        """Build help from the bindings and commands provided by a DOM node.
 
         Args:
             node: The node that might provide commands
@@ -105,9 +122,17 @@ class HelpScreen(ModalScreen[None]):
         Returns:
             The help text.
         """
-        if (commands := getattr(node, "COMMAND_MESSAGES", None)) is None:
+        helpful_bindings = [
+            binding
+            for binding in getattr(node, "BINDINGS", [])
+            if isinstance(binding, HelpfulBinding)
+        ]
+        commands = getattr(node, "COMMAND_MESSAGES", [])
+        if not any((helpful_bindings, commands)):
             return ""
         keys = "| Command | Key | Description |\n| - | - | - |\n"
+        for binding in helpful_bindings:
+            keys += f"| | {self._all_keys(binding)} | {binding.tooltip or binding.description} |\n"
         for command in sorted(commands, key=methodcaller("command")):
             keys += f"| {command.command()} | {self._all_keys(command)} | {command.tooltip()} |\n"
         return f"\n\n{keys}"
