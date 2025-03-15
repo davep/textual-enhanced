@@ -115,11 +115,11 @@ class HelpScreen(ModalScreen[None]):
         commands = getattr(node, "COMMAND_MESSAGES", [])
         if not any((helpful_bindings, commands)):
             return ""
-        keys = "| Command | Key | Description |\n| - | - | - |\n"
+        keys = f"{'| Command ' if commands else ''}| Key | Description |\n{'| - ' if commands else ''}| - | - |\n"
         for binding in sorted(
             helpful_bindings, key=attrgetter("most_helpful_description")
         ):
-            keys += f"| | {self._all_keys(binding)} | {binding.most_helpful_description} |\n"
+            keys += f"{'| ' if commands else ''}| {self._all_keys(binding)} | {binding.most_helpful_description} |\n"
         for command in sorted(commands, key=methodcaller("command")):
             keys += f"| {command.command()} | {self._all_keys(command)} | {command.tooltip()} |\n"
         return f"\n\n{keys}"

@@ -47,6 +47,12 @@ class NumberProvider(CommandsProvider):
             )
 
 
+class HelpfulButton(Button):
+    BINDINGS = [
+        HelpfulBinding("ctrl+o", "gndn", description="This does nothing useful")
+    ]
+
+
 ##############################################################################
 class Main(EnhancedScreen[None]):
     COMMAND_MESSAGES = (Help, ChangeTheme, Quit)
@@ -65,7 +71,7 @@ class Main(EnhancedScreen[None]):
 
     def compose(self) -> ComposeResult:
         yield Header()
-        yield Button("Quick input", id="input")
+        yield HelpfulButton("Quick input", id="input")
         yield Button("Another input", id="input_with_default")
         yield Button("Yes or no?", id="confirm")
         yield Button("Pick a number", id="number")
