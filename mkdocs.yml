@@ -11,6 +11,7 @@ nav:
       - library-contents/app.md
       - library-contents/binding.md
       - library-contents/commands.md
+      - library-contents/containers.md
       - library-contents/dialogs.md
       - library-contents/screen.md
       - library-contents/tools.md
