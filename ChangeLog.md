@@ -1,5 +1,12 @@
 # textual-enhanced ChangeLog
 
+## Unreleased
+
+**Released: WiP**
+
+- Added `containers.EnhancedVerticalScroll`.
+  ([#33](https://github.com/davep/textual-enhanced/pull/33))
+
 ## v0.8.1
 
 **Released: 2025-03-15***
