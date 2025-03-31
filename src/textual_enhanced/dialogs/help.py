@@ -12,7 +12,7 @@ from webbrowser import open as open_url
 from textual import on
 from textual.app import ComposeResult
 from textual.binding import Binding
-from textual.containers import Center, Vertical, VerticalScroll
+from textual.containers import Center, Vertical
 from textual.dom import DOMNode
 from textual.screen import ModalScreen, Screen
 from textual.widgets import Button, Markdown
@@ -21,6 +21,7 @@ from textual.widgets import Button, Markdown
 # Textual enhanced imports.
 from ..binding import HelpfulBinding
 from ..commands import Command
+from ..containers import EnhancedVerticalScroll
 from ..tools import add_key
 
 
@@ -49,7 +50,7 @@ class HelpScreen(ModalScreen[None]):
             background: $foreground 10%;
         }
 
-        VerticalScroll {
+        EnhancedVerticalScroll {
             scrollbar-gutter: stable;
             scrollbar-background: $panel;
             scrollbar-background-hover: $panel;
@@ -141,7 +142,7 @@ class HelpScreen(ModalScreen[None]):
         """Compose the layout of the help screen."""
         with Vertical() as help_screen:
             help_screen.border_title = "Help"
-            with VerticalScroll():
+            with EnhancedVerticalScroll():
                 yield Markdown(self._template.format(context_help=self._context_help))
             with Center():
                 yield Button(add_key("Okay", "Esc", self))
