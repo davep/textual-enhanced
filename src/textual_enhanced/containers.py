@@ -35,6 +35,7 @@ class EnhancedVerticalScroll(VerticalScroll):
             tooltip="Scroll down half a page",
         ),
     ]
+    """Additional movement bindings that might help vim/less users."""
 
     def action_scroll_half_page(self, direction: Literal[-1, 1]) -> None:
         """Scroll the view half a page in the given direction.
