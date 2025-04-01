@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-**Released: 2025-03-31**
+**Released: WiP**
 
 - Extended the command system so that Textual's `Keymap` facility can be
   used. ([#36](https://github.com/davep/textual-enhanced/pull/36))
