@@ -11,7 +11,6 @@ from webbrowser import open as open_url
 # Textual imports.
 from textual import on
 from textual.app import ComposeResult
-from textual.binding import Binding
 from textual.containers import Center, Vertical
 from textual.dom import DOMNode
 from textual.screen import ModalScreen, Screen
@@ -20,7 +19,7 @@ from textual.widgets import Button, Markdown
 ##############################################################################
 # Textual enhanced imports.
 from ..binding import HelpfulBinding
-from ..commands import Command
+from ..commands.bindings import all_keys_for
 from ..containers import EnhancedVerticalScroll
 from ..tools import add_key
 
@@ -84,26 +83,11 @@ class HelpScreen(ModalScreen[None]):
                 self._context_help += f"\n\n{cleandoc(node.HELP)}"
             self._context_help += self.input_help(node)
 
-    def _all_keys(self, source: Command | Binding) -> str:
-        """Render all the keys for the given command or binding.
-
-        Args:
-            source: The command or binding to get the keys for.
-
-        Returns:
-            A string listing all the keys for the command or binding.
-        """
-        binding = source if isinstance(source, Binding) else source.binding()
-        return ", ".join(
-            self.app.get_key_display(Binding(key.strip(), ""))
-            for key in binding.key.split(",")
-        )
-
     def input_help(self, node: DOMNode) -> str:
         """Build help from the bindings and commands provided by a DOM node.
 
         Args:
-            node: The node that might provide commands
+            node: The node that might provide commands.
 
         Returns:
             The help text.
@@ -120,9 +104,9 @@ class HelpScreen(ModalScreen[None]):
         for binding in sorted(
             helpful_bindings, key=attrgetter("most_helpful_description")
         ):
-            keys += f"{'| ' if commands else ''}| {self._all_keys(binding)} | {binding.most_helpful_description} |\n"
+            keys += f"{'| ' if commands else ''}| {', '.join(all_keys_for(node, binding))} | {binding.most_helpful_description} |\n"
         for command in sorted(commands, key=methodcaller("command")):
-            keys += f"| {command.command()} | {self._all_keys(command)} | {command.tooltip()} |\n"
+            keys += f"| {command.command()} | {', '.join(all_keys_for(node, command))} | {command.tooltip()} |\n"
         return f"\n\n{keys}"
 
     @property

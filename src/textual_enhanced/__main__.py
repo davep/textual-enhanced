@@ -145,6 +145,9 @@ class DemoApp(EnhancedApp[None]):
     def get_default_screen(self) -> Main:
         return Main()
 
+    def on_mount(self) -> None:
+        self.update_keymap({"Help": "f7,f1,h,question_mark"})
+
 
 ##############################################################################
 if __name__ == "__main__":

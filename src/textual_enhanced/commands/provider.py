@@ -18,6 +18,7 @@ from textual.message import Message
 
 ##############################################################################
 # Local imports.
+from .bindings import primary_key_for
 from .command import Command
 
 
@@ -100,7 +101,7 @@ class CommandsProvider(Provider):
         if not isinstance(message, Command) or not message.has_binding:
             return text
         key = Text(
-            f"[{self.app.get_key_display(message.primary_binding())}]",
+            f"[{primary_key_for(self.screen, message.__class__)}]",
             style=(self.app.current_theme.accent if self.app.current_theme else None)
             or "dim",
         )
