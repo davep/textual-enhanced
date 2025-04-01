@@ -1,8 +1,8 @@
 # textual-enhanced ChangeLog
 
-## Unreleased
+## v0.10.0
 
-**Released: WiP**
+**Released: 2025-04-01**
 
 - Extended the command system so that Textual's `Keymap` facility can be
   used. ([#36](https://github.com/davep/textual-enhanced/pull/36))
