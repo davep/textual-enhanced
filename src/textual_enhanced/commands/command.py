@@ -85,7 +85,7 @@ class Command(Message):
 
     @property
     def context_tooltip(self) -> str:
-        """The tooltip for the comment, in context."""
+        """The tooltip for the command, in context."""
         return self.tooltip()
 
     @classmethod
@@ -157,20 +157,6 @@ class Command(Message):
             show=cls.SHOW_IN_FOOTER,
             key_display=display,
             id=cls.__name__,
-        )
-
-    @classmethod
-    def primary_binding(cls) -> Binding:
-        """Create a binding object for the primary key of the command.
-
-        Returns:
-            A [`Binding`][textual.binding.Binding] for the primary key.
-
-        Raises:
-            ValueError: If the command has no key binding.
-        """
-        return (binding := cls.binding()).with_key(
-            cls.key_binding(), binding.key_display
         )
 
     @property
