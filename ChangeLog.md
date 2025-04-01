@@ -6,6 +6,7 @@
 
 - Extended the command system so that Textual's `Keymap` facility can be
   used. ([#36](https://github.com/davep/textual-enhanced/pull/36))
+- Dropped support for Python 3.9.
 
 ## v0.9.0
 
