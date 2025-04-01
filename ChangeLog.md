@@ -34,7 +34,7 @@
 
 - Added a temporary workaround for Textual 2.0.x's kinda-unannounced
   breaking change to how the command palette works.
-  (#23[](https://github.com/davep/textual-enhanced/pull/23))
+  ([#23](https://github.com/davep/textual-enhanced/pull/23))
 
 ## v0.7.0
 
