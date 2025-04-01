@@ -156,6 +156,7 @@ class Command(Message):
             tooltip=cls.tooltip(),
             show=cls.SHOW_IN_FOOTER,
             key_display=display,
+            id=cls.__name__,
         )
 
     @classmethod
