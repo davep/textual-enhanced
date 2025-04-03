@@ -34,6 +34,8 @@ class EnhancedVerticalScroll(VerticalScroll):
             "scroll_half_page(1)",
             tooltip="Scroll down half a page",
         ),
+        HelpfulBinding("g, <, p, %", "scroll_home", tooltip="Scroll to the top"),
+        HelpfulBinding("G, >", "scroll_end", tooltip="Scroll to the bottom"),
     ]
     """Additional movement bindings that might help vim/less users."""
 

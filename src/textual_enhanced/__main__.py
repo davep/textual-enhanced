@@ -68,6 +68,9 @@ class Main(EnhancedScreen[None]):
         ),
         HelpfulBinding("ctrl+t, ctrl+k", "gndn", description="This is the description"),
     )
+    HELP = "Here's some really long text to scroll: {}".format(
+        "\n".join([f"{n}. This is a filler line" for n in range(100)])
+    )
 
     def compose(self) -> ComposeResult:
         yield Header()

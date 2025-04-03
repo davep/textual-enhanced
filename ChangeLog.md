@@ -1,5 +1,14 @@
 # textual-enhanced ChangeLog
 
+## Unreleased
+
+**Released: WiP**
+
+- Added <kbd>g</kbd>, <kbd>G</kbd>, <kbd>\<</kbd>, <kbd>></kbd>,
+  <kbd>p</kbd> and <kbd>%</kbd> as extra bindings for going home/end in
+  `containers.EnhancedVerticalScrol`.
+  ([#40](https://github.com/davep/textual-enhanced/pull/40))
+
 ## v0.10.0
 
 **Released: 2025-04-01**
