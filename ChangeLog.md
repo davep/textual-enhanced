@@ -1,8 +1,8 @@
 # textual-enhanced ChangeLog
 
-## Unreleased
+## v0.11.0
 
-**Released: WiP**
+**Released: 2025-04-03**
 
 - Added <kbd>g</kbd>, <kbd>G</kbd>, <kbd>\<</kbd>, <kbd>></kbd>,
   <kbd>p</kbd> and <kbd>%</kbd> as extra bindings for going home/end in
