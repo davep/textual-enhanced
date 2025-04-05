@@ -62,6 +62,8 @@ plugins:
 
 theme:
   name: material
+  icon:
+    logo: fontawesome/solid/bread-slice
   features:
     - navigation.tabs
     - navigation.indexes
