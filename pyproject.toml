@@ -33,9 +33,9 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/davep/textual-enhanced"
+Homepage = "https://textual-enhanced.davep.dev/"
 Repository = "https://github.com/davep/textual-enhanced"
-Documentation = "https://github.com/davep/textual-enhanced/blob/main/README.md"
+Documentation = "https://textual-enhanced.davep.dev/"
 Source = "https://github.com/davep/textual-enhanced"
 Issues = "https://github.com/davep/textual-enhanced/issues"
 Discussions = "https://github.com/davep/textual-enhanced/discussions"
