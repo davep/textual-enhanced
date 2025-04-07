@@ -6,6 +6,6 @@ and work. I've written this as a common set of tweaks I want for my own
 Textual apps. It might be useful for yours too.
 
 See [the online documentation](https://textual-enhanced.davep.dev/) for more
-backrgound and details.
+background and details.
 
 [//]: # (README.md ends here)

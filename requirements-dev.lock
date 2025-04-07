@@ -35,6 +35,7 @@ charset-normalizer==3.4.1
 click==8.1.8
     # via mkdocs
     # via textual-dev
+codespell==2.4.1
 colorama==0.4.6
     # via griffe
     # via mkdocs-material
