@@ -51,7 +51,7 @@ class ModalInput(ModalScreen[str | None]):
         yield Input(self._initial, placeholder=self._placeholder)
 
     @on(Input.Submitted)
-    def search(self) -> None:
+    def accept_input(self) -> None:
         """Accept the input."""
         self.dismiss(self.query_one(Input).value.strip())
 
