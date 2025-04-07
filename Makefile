@@ -1,6 +1,7 @@
 lib      := textual_enhanced
 src      := src/
-examples := docs/examples
+docs     := docs/
+examples := $(docs)examples
 run      := rye run
 test     := rye test
 python   := $(run) python
@@ -8,6 +9,7 @@ lint     := rye lint -- --select I
 fmt      := rye fmt
 mypy     := $(run) mypy
 mkdocs   := $(run) mkdocs
+spell    := $(run) codespell
 
 ##############################################################################
 # Local "interactive testing" of the code.
@@ -56,8 +58,12 @@ typecheck:			# Perform static type checks with mypy
 stricttypecheck:	        # Perform a strict static type checks with mypy
 	$(mypy) --scripts-are-modules --strict $(src)
 
+.PHONY: spellcheck
+spellcheck:			# Spell check the code
+	$(spell) *.md $(src) $(docs)
+
 .PHONY: checkall
-checkall: codestyle lint stricttypecheck # Check all the things
+checkall: spellcheck codestyle lint stricttypecheck # Check all the things
 
 ##############################################################################
 # Documentation.
