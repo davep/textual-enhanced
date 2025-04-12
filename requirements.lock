@@ -20,15 +20,15 @@ mdit-py-plugins==0.4.2
     # via markdown-it-py
 mdurl==0.1.2
     # via markdown-it-py
-platformdirs==4.3.6
+platformdirs==4.3.7
     # via textual
 pygments==2.19.1
     # via rich
-rich==13.9.4
+rich==14.0.0
     # via textual
-textual==1.0.0
+textual==3.1.0
     # via textual-enhanced
-typing-extensions==4.12.2
+typing-extensions==4.13.2
     # via textual
 uc-micro-py==1.0.3
     # via linkify-it-py

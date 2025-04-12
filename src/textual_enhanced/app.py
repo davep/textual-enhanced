@@ -8,6 +8,9 @@ from typing import Generic
 # Textual imports.
 from textual.app import App, ReturnType
 from textual.binding import Binding
+from textual.content import Content
+from textual.markup import MarkupError
+from textual.notifications import SeverityLevel
 
 
 ##############################################################################
@@ -67,6 +70,51 @@ class EnhancedApp(Generic[ReturnType], App[ReturnType]):
             tooltip="Show the command palette",
         ),
     ]
+
+    def notify(
+        self,
+        message: str,
+        *,
+        title: str = "",
+        severity: SeverityLevel = "information",
+        timeout: float | None = None,
+        markup: bool = True,
+    ) -> None:
+        """Create a notification.
+
+        Args:
+            message: The message for the notification.
+            title: The title for the notification.
+            severity: The severity of the notification.
+            timeout: The timeout (in seconds) for the notification, or `None` for default.
+            markup: Render the message as content markup?
+
+        Notes:
+            See the [Textual docs for `notify`][textual.app.App.notify] for full details.
+
+            This is a markup-safe version of the `notify` method. Textual
+            has changed how it handles markup and has now decided that
+            broken markup should crash your application; imagine if browsers
+            did that! So this is a sensible approach to handling unexpected
+            markup-looking text.
+
+            The `markup` parameter is still used; but if `markup` is
+            [`True`][True] a test call to
+            [`Content.from_markup`][textual.content.Content.from_markup] is
+            performed and, if `MarkupError` is raised `markup` is forced to
+            [`False`][False].
+
+            Surprise markup [should not be the application user's
+            concern](https://en.wikipedia.org/wiki/Principle_of_least_astonishment).
+        """
+        if markup:
+            try:
+                _ = Content.from_markup(message)
+            except MarkupError:
+                markup = False
+        return super().notify(
+            message, title=title, severity=severity, timeout=timeout, markup=markup
+        )
 
 
 ### app.py ends here

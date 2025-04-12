@@ -78,6 +78,7 @@ class Main(EnhancedScreen[None]):
         yield Button("Another input", id="input_with_default")
         yield Button("Yes or no?", id="confirm")
         yield Button("Pick a number", id="number")
+        yield Button("Safe notification", id="notification")
         yield Footer()
 
     @on(Button.Pressed, "#input, #input_with_default")
@@ -112,6 +113,12 @@ class Main(EnhancedScreen[None]):
     @on(ShowNumber)
     def show_the_number(self, number: ShowNumber) -> None:
         self.notify(f"You picked {number.number}")
+
+    @on(Button.Pressed, "#notification")
+    def safe_notification_test(self) -> None:
+        self.notify("Body: [True, False]", title="Title: [True, False]")
+        self.notify("This has [red]colour[/]")
+        self.notify("This has [red]colour[/] and [True, False]")
 
 
 ##############################################################################
