@@ -1,8 +1,8 @@
 # textual-enhanced ChangeLog
 
-## Unreleased
+## v0.12.0
 
-**Released: WiP**
+**Released: 2025-04-17**
 
 - Renamed `ModalInput.search` to `ModalInput.accept_input`.
   ([#43](https://github.com/davep/textual-enhanced/issues/43))
