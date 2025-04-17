@@ -126,11 +126,9 @@ class CommandsProvider(Provider):
         Returns:
             The call to perform the command.
         """
-        return (
-            partial(self.screen.run_action, message.action_name())
-            if isinstance(message, Command)
-            else partial(self.screen.post_message, message)
-        )
+        if isinstance(message, Command):
+            return partial(self.screen.run_action, message.action_name())
+        return partial(self.screen.post_message, message)
 
     async def discover(self) -> Hits:
         """Handle a request to discover commands.
