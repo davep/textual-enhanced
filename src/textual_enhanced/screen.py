@@ -6,13 +6,12 @@ from typing import Generic
 
 ##############################################################################
 # Textual imports.
-from textual import on
 from textual.command import CommandPalette
 from textual.screen import Screen, ScreenResultType
 
 ##############################################################################
 # Local imports.
-from .commands import ChangeTheme, CommandsProvider, Help, Quit
+from .commands import CommandsProvider
 from .dialogs import HelpScreen
 
 
@@ -33,7 +32,6 @@ class EnhancedScreen(Generic[ScreenResultType], Screen[ScreenResultType]):
             )
         )
 
-    @on(Help)
     def action_help_command(self) -> None:
         """Show the help screen.
 
@@ -42,15 +40,9 @@ class EnhancedScreen(Generic[ScreenResultType], Screen[ScreenResultType]):
         """
         self.app.push_screen(HelpScreen(self))
 
-    @on(ChangeTheme)
     def action_change_theme_command(self) -> None:
         """Show the Textual theme picker command palette."""
         self.app.search_themes()
-
-    @on(Quit)
-    def action_quit_command(self) -> None:
-        """Quit the application."""
-        self.app.exit()
 
 
 ### screen.py ends here

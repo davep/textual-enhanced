@@ -15,6 +15,7 @@ from rich.text import Text
 from textual.command import DiscoveryHit, Hit, Hits, Provider
 from textual.content import Content
 from textual.message import Message
+from textual.types import IgnoreReturnCallbackType
 
 ##############################################################################
 # Local imports.
@@ -116,6 +117,21 @@ class CommandsProvider(Provider):
             return text.append_text(Text(" ")).append_text(key)
         return Content.assemble(text, " ", Content.from_rich_text(key))  # type: ignore
 
+    def _perform(self, message: Command | Message) -> IgnoreReturnCallbackType:
+        """Create the call to perform a command.
+
+        Args:
+            message: The message to perform.
+
+        Returns:
+            The call to perform the command.
+        """
+        return (
+            partial(self.screen.run_action, message.action_name())
+            if isinstance(message, Command)
+            else partial(self.screen.post_message, message)
+        )
+
     async def discover(self) -> Hits:
         """Handle a request to discover commands.
 
@@ -125,7 +141,7 @@ class CommandsProvider(Provider):
         for command, description, message in self._commands:
             yield DiscoveryHit(
                 self._maybe_add_binding(message, command),
-                partial(self.screen.post_message, message),
+                self._perform(message),
                 help=description,
             )
 
@@ -144,7 +160,7 @@ class CommandsProvider(Provider):
                 yield Hit(
                     match,
                     self._maybe_add_binding(message, matcher.highlight(command)),
-                    partial(self.screen.post_message, message),
+                    self._perform(message),
                     help=description,
                 )
 
