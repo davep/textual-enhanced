@@ -9,9 +9,11 @@
 - A `Command`, invoked either by the command palette or by a binding, will
   now always invoke its action; it's no longer necessary to use `@on` as
   well as define the `action_*_command` function.
+  ([#47](https://github.com/davep/textual-enhanced/pull/47))
 - A `Command` can now have an `ACTION` that is an inline action; it's no
   longer necessary to define one `action_*_command` per command (eg: a
   `Quit` command can set its `ACTION` to `"app.quit"`, etc).
+  ([#47](https://github.com/davep/textual-enhanced/pull/47))
 
 ## v0.11.0
 
