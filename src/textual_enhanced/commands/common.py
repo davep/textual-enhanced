@@ -27,6 +27,7 @@ class Quit(Command):
 
     BINDING_KEY = "f10, ctrl+q"
     SHOW_IN_FOOTER = True
+    ACTION = "app.quit"
 
 
 ##############################################################################

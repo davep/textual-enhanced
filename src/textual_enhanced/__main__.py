@@ -47,6 +47,22 @@ class NumberProvider(CommandsProvider):
             )
 
 
+##############################################################################
+class SayOne(Command):
+    ACTION = "say('One')"
+
+
+##############################################################################
+class SayTwo(Command):
+    ACTION = "say('Two')"
+
+
+class OtherCommands(CommandsProvider):
+    def commands(self) -> CommandHits:
+        yield SayOne()
+        yield SayTwo()
+
+
 class HelpfulButton(Button):
     BINDINGS = [
         HelpfulBinding("ctrl+o", "gndn", description="This does nothing useful")
@@ -56,7 +72,7 @@ class HelpfulButton(Button):
 ##############################################################################
 class Main(EnhancedScreen[None]):
     COMMAND_MESSAGES = (Help, ChangeTheme, Quit)
-    COMMANDS = {CommonCommands}
+    COMMANDS = {CommonCommands, OtherCommands}
     BINDINGS = Command.bindings(
         *COMMAND_MESSAGES,
         HelpfulBinding(
@@ -112,6 +128,9 @@ class Main(EnhancedScreen[None]):
     @on(ShowNumber)
     def show_the_number(self, number: ShowNumber) -> None:
         self.notify(f"You picked {number.number}")
+
+    def action_say(self, text: str) -> None:
+        self.notify(text)
 
 
 ##############################################################################
