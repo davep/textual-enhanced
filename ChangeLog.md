@@ -5,6 +5,7 @@
 **Released: WiP**
 
 - Added `tools.History`.
+  ([#50](https://github.com/davep/textual-enhanced/pull/50))
 
 ## v0.12.0
 
