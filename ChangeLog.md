@@ -1,5 +1,11 @@
 # textual-enhanced ChangeLog
 
+## Unreleased
+
+**Released: WiP**
+
+- Added `tools.History`.
+
 ## v0.12.0
 
 **Released: 2025-04-17**

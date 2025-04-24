@@ -55,6 +55,8 @@ identify==2.6.6
 idna==3.10
     # via requests
     # via yarl
+iniconfig==2.1.0
+    # via pytest
 jinja2==3.1.5
     # via aiohttp-jinja2
     # via mkdocs
@@ -114,6 +116,7 @@ nodeenv==1.9.1
     # via pre-commit
 packaging==24.2
     # via mkdocs
+    # via pytest
 paginate==0.5.7
     # via mkdocs-material
 pathspec==0.12.1
@@ -122,6 +125,8 @@ platformdirs==4.3.6
     # via mkdocs-get-deps
     # via textual
     # via virtualenv
+pluggy==1.5.0
+    # via pytest
 pre-commit==4.1.0
 propcache==0.2.1
     # via aiohttp
@@ -132,6 +137,7 @@ pygments==2.19.1
 pymdown-extensions==10.14.3
     # via mkdocs-material
     # via mkdocstrings
+pytest==8.3.5
 python-dateutil==2.9.0.post0
     # via ghp-import
 pyyaml==6.0.2
