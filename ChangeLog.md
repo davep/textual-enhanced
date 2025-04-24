@@ -1,8 +1,8 @@
 # textual-enhanced ChangeLog
 
-## Unreleased
+## v0.13.0
 
-**Released: WiP**
+**Released: 2025-04-24**
 
 - Added `tools.History`.
   ([#50](https://github.com/davep/textual-enhanced/pull/50))
