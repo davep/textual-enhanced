@@ -6,6 +6,7 @@
 
 - Migrated from `rye` to `uv` for development management.
   ([#53](https://github.com/davep/textual-enhanced/pull/53))
+- Added Python 3.14 as a tested/supported Python version.
 
 ## v0.13.0
 
