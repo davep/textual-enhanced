@@ -115,7 +115,7 @@ class CommandsProvider(Provider):
         # to use, I'll tidy this up.
         if isinstance(text, Text):
             return text.append_text(Text(" ")).append_text(key)
-        return Content.assemble(text, " ", Content.from_rich_text(key))  # type: ignore
+        return Content.assemble(text, " ", Content.from_rich_text(key))
 
     def _perform(self, message: Command | Message) -> IgnoreReturnCallbackType:
         """Create the call to perform a command.
