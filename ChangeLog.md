@@ -1,5 +1,11 @@
 # textual-enhanced ChangeLog
 
+## Unreleased
+
+**Released: WiP**
+
+- Migrated from `rye` to `uv` for development management.
+
 ## v0.13.0
 
 **Released: 2025-04-24**
