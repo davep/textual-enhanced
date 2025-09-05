@@ -8,6 +8,8 @@
   ([#53](https://github.com/davep/textual-enhanced/pull/53))
 - Added Python 3.14 as a tested/supported Python version.
   ([#54](https://github.com/davep/textual-enhanced/pull/54))
+- Tightened up the remove of Textual's `Header` flair because Textual 6.x or
+  so made it worse.
 
 ## v0.13.0
 

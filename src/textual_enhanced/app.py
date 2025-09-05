@@ -40,9 +40,9 @@ class EnhancedApp(Generic[ReturnType], App[ReturnType]):
 
     /* Remove cruft from the Header. */
     Header {
-        /* The header icon serves no useful purpose. Remove it. */
-        HeaderIcon {
-            visibility: hidden;
+        /* I have zero use for the header icon or the clock. */
+        HeaderIcon, HeaderClockSpace {
+            display: none;
         }
 
         /* Ditto the tall version of the header. Nuke that. */
