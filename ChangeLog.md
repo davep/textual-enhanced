@@ -1,8 +1,8 @@
 # textual-enhanced ChangeLog
 
-## Unreleased
+## v1.0.0
 
-**Released: WiP**
+**Released: 2025-08-05**
 
 - Migrated from `rye` to `uv` for development management.
   ([#53](https://github.com/davep/textual-enhanced/pull/53))
