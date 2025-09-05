@@ -7,7 +7,8 @@ from dataclasses import dataclass
 ##############################################################################
 # Textual imports.
 from textual import on, work
-from textual.app import ComposeResult
+from textual.app import ComposeResult, RenderResult
+from textual.containers import Horizontal
 from textual.message import Message
 from textual.widgets import Button, Footer, Header
 
@@ -57,12 +58,14 @@ class SayTwo(Command):
     ACTION = "say('Two')"
 
 
+##############################################################################
 class OtherCommands(CommandsProvider):
     def commands(self) -> CommandHits:
         yield SayOne()
         yield SayTwo()
 
 
+##############################################################################
 class HelpfulButton(Button):
     BINDINGS = [
         HelpfulBinding("ctrl+o", "gndn", description="This does nothing useful")
@@ -70,7 +73,23 @@ class HelpfulButton(Button):
 
 
 ##############################################################################
+class Ruler(Horizontal):
+    DEFAULT_CSS = """
+    Ruler {
+        width: 1fr;
+        height: 1;
+        text-align: center;
+    }
+    """
+
+    def render(self) -> RenderResult:
+        return "----- | -----"
+
+
+##############################################################################
 class Main(EnhancedScreen[None]):
+    TITLE = "Title"
+    SUB_TITLE = "Title"
     COMMAND_MESSAGES = (Help, ChangeTheme, Quit)
     COMMANDS = {CommonCommands, OtherCommands}
     BINDINGS = Command.bindings(
@@ -90,6 +109,7 @@ class Main(EnhancedScreen[None]):
 
     def compose(self) -> ComposeResult:
         yield Header()
+        yield Ruler()
         yield HelpfulButton("Quick input", id="input")
         yield Button("Another input", id="input_with_default")
         yield Button("Yes or no?", id="confirm")
