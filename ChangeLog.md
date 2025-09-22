@@ -5,7 +5,7 @@
 **Released: WiP**
 
 - Tweaked the borders of the command palette so they stand out like they
-  used to.
+  used to. ([#59](https://github.com/davep/textual-enhanced/pull/59))
 
 ## v1.0.0
 
