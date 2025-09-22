@@ -1,5 +1,12 @@
 # textual-enhanced ChangeLog
 
+## Unreleased
+
+**Released: WiP**
+
+- Tweaked the borders of the command palette so they stand out like they
+  used to.
+
 ## v1.0.0
 
 **Released: 2025-08-05**
