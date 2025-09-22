@@ -23,10 +23,14 @@ class EnhancedApp(Generic[ReturnType], App[ReturnType]):
     CommandPalette > Vertical {
         width: 75%; /* Full-width command palette looks kinda unfinished. Fix that. */
         background: $panel;
+        #--input {
+            border-top: hkey $border;
+        }
         OptionList{
             scrollbar-background: $panel;
             scrollbar-background-hover: $panel;
             scrollbar-background-active: $panel;
+            border-bottom: hkey $border;
         }
         SearchIcon {
             display: none;
