@@ -1,8 +1,8 @@
 # textual-enhanced ChangeLog
 
-## Unreleased
+## v1.1.0
 
-**Released: WiP**
+**Released: 2025-11-11**
 
 - Tweaked the borders of the command palette so they stand out like they
   used to. ([#59](https://github.com/davep/textual-enhanced/pull/59))
