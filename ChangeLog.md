@@ -1,8 +1,8 @@
 # textual-enhanced ChangeLog
 
-## Unrelased
+## v1.2.0
 
-**Released: WiP**
+**Released: 2025-12-20**
 
 - Added `EnhancedScreen.busy_looking`.
   ([#62](https://github.com/davep/textual-enhanced/pull/62))
