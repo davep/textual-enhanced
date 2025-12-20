@@ -2,11 +2,13 @@
 
 ##############################################################################
 # Python imports.
-from typing import Generic
+from contextlib import contextmanager
+from typing import Generic, Iterator
 
 ##############################################################################
 # Textual imports.
 from textual.command import CommandPalette
+from textual.css.query import QueryType
 from textual.screen import Screen, ScreenResultType
 
 ##############################################################################
@@ -18,6 +20,31 @@ from .dialogs import HelpScreen
 ##############################################################################
 class EnhancedScreen(Generic[ScreenResultType], Screen[ScreenResultType]):
     """A Textual screen with some extras."""
+
+    @contextmanager
+    def busy_looking(self, selector: str | type[QueryType]) -> Iterator[None]:
+        """Provides a context that makes a widget look busy.
+
+        A simple helper that turns this:
+
+        ```python
+        self.query_one(Display).loading = True
+        self.do_something_that_takes_a_moment()
+        self.query_one(Display).loading = False
+        ```
+
+        into this:
+
+        ```python
+        with self.busy_looking(Display):
+            self.do_something_that_takes_a_moment()
+        ```
+        """
+        (busy_widget := self.query_one(selector)).loading = True
+        try:
+            yield
+        finally:
+            busy_widget.loading = False
 
     def show_palette(self, provider: type[CommandsProvider]) -> None:
         """Show a particular command palette.

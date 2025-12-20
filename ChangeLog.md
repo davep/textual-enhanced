@@ -1,5 +1,11 @@
 # textual-enhanced ChangeLog
 
+## Unrelased
+
+**Released: WiP**
+
+- Added `EnhancedScreen.busy_looking`.
+
 ## v1.1.0
 
 **Released: 2025-11-11**
