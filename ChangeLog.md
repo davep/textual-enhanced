@@ -5,6 +5,7 @@
 **Released: WiP**
 
 - Handle `vertical_line` as a bound key inside the help dialog.
+  ([#65](https://github.com/davep/textual-enhanced/pull/65))
 
 ## v1.2.0
 
