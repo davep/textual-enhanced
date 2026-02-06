@@ -1,8 +1,8 @@
 # textual-enhanced ChangeLog
 
-## Unreleased
+## v1.3.0
 
-**Released: WiP**
+**Released: 2026-02-06**
 
 - Handle `vertical_line` as a bound key inside the help dialog.
   ([#65](https://github.com/davep/textual-enhanced/pull/65))
