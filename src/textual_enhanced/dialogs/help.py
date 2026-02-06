@@ -83,6 +83,18 @@ class HelpScreen(ModalScreen[None]):
                 self._context_help += f"\n\n{cleandoc(node.HELP)}"
             self._context_help += self.input_help(node)
 
+    @staticmethod
+    def _table_safe(text: str) -> str:
+        """Escape some text for use in a table.
+
+        Args:
+            text: The text to make safe.
+
+        Returns:
+            The text made safe for use in a table.
+        """
+        return text.replace("|", r"\|")
+
     def input_help(self, node: DOMNode) -> str:
         """Build help from the bindings and commands provided by a DOM node.
 
@@ -104,9 +116,9 @@ class HelpScreen(ModalScreen[None]):
         for binding in sorted(
             helpful_bindings, key=attrgetter("most_helpful_description")
         ):
-            keys += f"{'| ' if commands else ''}| {', '.join(all_keys_for(node, binding))} | {binding.most_helpful_description} |\n"
+            keys += f"{'| ' if commands else ''}| {self._table_safe(', '.join(all_keys_for(node, binding)))} | {binding.most_helpful_description} |\n"
         for command in sorted(commands, key=methodcaller("command")):
-            keys += f"| {command.command()} | {', '.join(all_keys_for(node, command))} | {command.tooltip()} |\n"
+            keys += f"| {command.command()} | {self._table_safe(', '.join(all_keys_for(node, command)))} | {command.tooltip()} |\n"
         return f"\n\n{keys}"
 
     @property
