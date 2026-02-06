@@ -1,5 +1,11 @@
 # textual-enhanced ChangeLog
 
+## Unreleased
+
+**Released: WiP**
+
+- Handle `vertical_line` as a bound key inside the help dialog.
+
 ## v1.2.0
 
 **Released: 2025-12-20**

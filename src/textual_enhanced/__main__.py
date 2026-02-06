@@ -101,7 +101,11 @@ class Main(EnhancedScreen[None]):
             description="This is the description",
             tooltip="This is the tooltip",
         ),
-        HelpfulBinding("ctrl+t, ctrl+k", "gndn", description="This is the description"),
+        HelpfulBinding(
+            "vertical_line, ctrl+t, ctrl+k",
+            "gndn",
+            description="This is the description",
+        ),
     )
     HELP = "Here's some really long text to scroll: {}".format(
         "\n".join([f"{n}. This is a filler line" for n in range(100)])
