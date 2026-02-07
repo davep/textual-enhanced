@@ -1,9 +1,11 @@
 """Provides helper code for dealing with bindings."""
 
 ##############################################################################
-# Textual imports.
-from typing import Iterator
+# Python imports.
+from collections.abc import Iterator
 
+##############################################################################
+# Textual imports.
 from textual.app import App
 from textual.binding import Binding
 from textual.dom import DOMNode
