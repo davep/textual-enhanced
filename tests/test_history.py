@@ -2,7 +2,7 @@
 
 ##############################################################################
 # Python imports.
-from typing import Sequence
+from collections.abc import Sequence
 
 ##############################################################################
 # Pytest imports.

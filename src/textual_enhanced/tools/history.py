@@ -3,7 +3,8 @@
 ##############################################################################
 # Python imports.
 from collections import deque
-from typing import Generic, Iterator, Sequence, TypeVar
+from collections.abc import Iterator, Sequence
+from typing import Generic, TypeVar
 
 ##############################################################################
 # Textual imports.

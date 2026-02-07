@@ -116,9 +116,16 @@ class HelpScreen(ModalScreen[None]):
         for binding in sorted(
             helpful_bindings, key=attrgetter("most_helpful_description")
         ):
-            keys += f"{'| ' if commands else ''}| {self._table_safe(', '.join(all_keys_for(node, binding)))} | {binding.most_helpful_description} |\n"
+            keys += (
+                f"{'| ' if commands else ''}| "
+                f"{self._table_safe(', '.join(all_keys_for(node, binding)))} "
+                f"| {binding.most_helpful_description} |\n"
+            )
         for command in sorted(commands, key=methodcaller("command")):
-            keys += f"| {command.command()} | {self._table_safe(', '.join(all_keys_for(node, command)))} | {command.tooltip()} |\n"
+            keys += (
+                f"| {command.command()} "
+                f"| {self._table_safe(', '.join(all_keys_for(node, command)))} | {command.tooltip()} |\n"
+            )
         return f"\n\n{keys}"
 
     @property
