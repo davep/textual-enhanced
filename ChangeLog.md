@@ -1,5 +1,13 @@
 # textual-enhanced ChangeLog
 
+## Unreleased
+
+**Released: WiP**
+
+- Added <kbd>Alt</kbd>+<kbd>x</kbd> as a key that can call the command
+  palette (because I changed my default terminal setup).
+  ([#70](https://github.com/davep/textual-enhanced/pull/70))
+
 ## v1.3.0
 
 **Released: 2026-02-06**

@@ -64,7 +64,7 @@ class EnhancedApp(Generic[ReturnType], App[ReturnType]):
 
     BINDINGS = [
         Binding(
-            "ctrl+p, super+x, :",
+            "ctrl+p, super+x, alt+x, :",
             "command_palette",
             "Commands",
             show=False,
