@@ -3,8 +3,9 @@
 ##############################################################################
 # Python imports.
 from abc import abstractmethod
+from collections.abc import Iterator
 from functools import partial
-from typing import Iterator, NamedTuple, TypeAlias
+from typing import NamedTuple, TypeAlias
 
 ##############################################################################
 # Rich imports.
