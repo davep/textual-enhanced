@@ -1,8 +1,8 @@
 # textual-enhanced ChangeLog
 
-## Unreleased
+## v1.4.0
 
-**Released: WiP**
+**Released: 20206-04-03**
 
 - Added <kbd>Alt</kbd>+<kbd>x</kbd> as a key that can call the command
   palette (because I changed my default terminal setup).
