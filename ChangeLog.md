@@ -1,5 +1,13 @@
 # textual-enhanced ChangeLog
 
+## Unreleased
+
+**Released: WiP**
+
+- Removed all ANSI themes from the available themes. Not only do they not
+  look great, they can cause a crash in some applications.
+  ([#74](https://github.com/davep/textual-enhanced/pull/74))
+
 ## v1.4.0
 
 **Released: 20206-04-03**
