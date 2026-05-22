@@ -8,6 +8,7 @@ from typing import Generic
 # Textual imports.
 from textual.app import App, ReturnType
 from textual.binding import Binding
+from textual.theme import Theme
 
 
 ##############################################################################
@@ -71,6 +72,15 @@ class EnhancedApp(Generic[ReturnType], App[ReturnType]):
             tooltip="Show the command palette",
         ),
     ]
+
+    @property
+    def available_themes(self) -> dict[str, Theme]:
+        """All available non-ANSI themes."""
+        return {
+            name: theme
+            for name, theme in super().available_themes.items()
+            if not name.startswith("ansi")
+        }
 
 
 ### app.py ends here
