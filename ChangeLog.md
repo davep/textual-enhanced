@@ -1,8 +1,8 @@
 # textual-enhanced ChangeLog
 
-## Unreleased
+## v1.5.0
 
-**Released: WiP**
+**Released: 2026-05-22**
 
 - Removed all ANSI themes from the available themes. Not only do they not
   look great, they can cause a crash in some applications.
