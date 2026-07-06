@@ -127,7 +127,10 @@ class Main(EnhancedScreen[None]):
             ModalInput(placeholder="Enter some text here")
             if message.button.id == "input"
             else ModalInput(
-                placeholder="This has an initial value", initial="Testing..."
+                placeholder="This has an initial value",
+                initial="Testing...",
+                title="This is a title",
+                sub_title="This is a subtitle",
             )
         ):
             self.notify(f"Entered '{text}")
