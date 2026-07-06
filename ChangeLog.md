@@ -1,8 +1,8 @@
 # textual-enhanced ChangeLog
 
-## Unreleased
+## v1.6.0
 
-**Released: WiP**
+**Released: 2026-07-06**
 
 - Added `password`, `suggester`, `title` and `sub_title` to `ModalInput`.
   ([#76](https://github.com/davep/textual-enhanced/pull/76))
