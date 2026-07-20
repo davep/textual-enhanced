@@ -37,7 +37,7 @@ def all_keys_for(node: DOMNode, source: type[Command] | Binding) -> Iterator[str
             ).active_bindings.values()
             if binding.binding.id == source.__name__
         ]
-        or [source.binding()]
+        or ([source.binding()] if source.BINDING_KEY else [])
     ):
         for key in binding.key.split(","):
             yield node.app.get_key_display(Binding(key.strip(), ""))

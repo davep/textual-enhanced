@@ -50,11 +50,15 @@ class NumberProvider(CommandsProvider):
 
 ##############################################################################
 class SayOne(Command):
+    """This says one"""
+
     ACTION = "say('One')"
 
 
 ##############################################################################
 class SayTwo(Command):
+    """This says two"""
+
     ACTION = "say('Two')"
 
 
@@ -90,12 +94,10 @@ class Ruler(Horizontal):
 class Main(EnhancedScreen[None]):
     TITLE = "Title"
     SUB_TITLE = "Title"
-    COMMAND_MESSAGES = (Help, ChangeTheme, Quit)
+    COMMAND_MESSAGES = (Help, ChangeTheme, Quit, SayOne, SayTwo)
     COMMANDS = {CommonCommands, OtherCommands}
     BINDINGS = Command.bindings(
         *COMMAND_MESSAGES,
-        SayOne,
-        SayTwo,
         HelpfulBinding(
             "ctrl+y, ctrl+i",
             "gndn",
