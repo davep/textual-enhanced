@@ -130,6 +130,7 @@ class Command(Message):
         return [
             (binding if isinstance(binding, (Binding, tuple)) else binding.binding())
             for binding in bindings
+            if isinstance(binding, (Binding, tuple)) or binding.BINDING_KEY
         ]
 
     @classmethod

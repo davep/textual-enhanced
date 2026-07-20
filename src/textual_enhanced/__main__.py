@@ -94,6 +94,8 @@ class Main(EnhancedScreen[None]):
     COMMANDS = {CommonCommands, OtherCommands}
     BINDINGS = Command.bindings(
         *COMMAND_MESSAGES,
+        SayOne,
+        SayTwo,
         HelpfulBinding(
             "ctrl+y, ctrl+i",
             "gndn",
