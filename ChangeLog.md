@@ -1,5 +1,15 @@
 # textual-enhanced ChangeLog
 
+## Unreleased
+
+**Released: WiP**
+
+- Allow commands to not have bindings but still be submitted to
+  `Command.bindings`.
+  ([#78](https://github.com/davep/textual-enhanced/pull/78))
+- Ensure that commands that have no default binding still appear in the help
+  screen. ([#78](https://github.com/davep/textual-enhanced/pull/78))
+
 ## v1.6.0
 
 **Released: 2026-07-06**
