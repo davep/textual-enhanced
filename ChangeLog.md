@@ -1,8 +1,8 @@
 # textual-enhanced ChangeLog
 
-## Unreleased
+## v1.6.1
 
-**Released: WiP**
+**Released: 2026-10-02**
 
 - Allow commands to not have bindings but still be submitted to
   `Command.bindings`.
