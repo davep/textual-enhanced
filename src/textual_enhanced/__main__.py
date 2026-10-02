@@ -72,8 +72,16 @@ class OtherCommands(CommandsProvider):
 ##############################################################################
 class HelpfulButton(Button):
     BINDINGS = [
-        HelpfulBinding("ctrl+o", "gndn", description="This does nothing useful")
+        HelpfulBinding(
+            "ctrl+o",
+            "gndn",
+            description="This does nothing useful",
+            id="helpful_button",
+        )
     ]
+
+    def action_gndn(self) -> None:
+        self.app.notify("This is a helpful button, but it doesn't do anything useful.")
 
 
 ##############################################################################
@@ -194,6 +202,10 @@ class DemoApp(EnhancedApp[None]):
     """
 
     COMMANDS = set()
+
+    def __init__(self) -> None:
+        super().__init__()
+        self.update_keymap({"helpful_button": "o"})
 
     def get_default_screen(self) -> Main:
         return Main()

@@ -9,6 +9,9 @@
   ([#78](https://github.com/davep/textual-enhanced/pull/78))
 - Ensure that commands that have no default binding still appear in the help
   screen. ([#78](https://github.com/davep/textual-enhanced/pull/78))
+- Ensured that the override binding is shown in help for `HelpfulBinding`s
+  that are rebound via an id.
+  ([#80](https://github.com/davep/textual-enhanced/pull/80))
 
 ## v1.6.0
 
