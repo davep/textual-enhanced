@@ -28,7 +28,18 @@ def all_keys_for(node: DOMNode, source: type[Command] | Binding) -> Iterator[str
         The display names of all the keys for the command/binding.
     """
     for binding in (
-        [source]
+        [
+            source
+            if source.id is None
+            else next(
+                (
+                    rebind.binding
+                    for rebind in node.app.active_bindings.values()
+                    if rebind.binding.id == source.id
+                ),
+                source,
+            )
+        ]
         if isinstance(source, Binding)
         else [
             binding.binding
