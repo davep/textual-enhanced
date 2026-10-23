@@ -1,8 +1,5 @@
 name: Code quality tests
 
-permissions:
-  contents: read
-
 on:
   push:
     branches:
